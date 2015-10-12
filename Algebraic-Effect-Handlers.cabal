@@ -4,13 +4,14 @@
 name:                Algebraic-Effect-Handlers
 version:             0.1.0.0
 synopsis:            Library for handling effects with Algebraic Effect Handlers
--- description:         
+description:         A library for effienctly handling effects, using algebraic effect handlers
 homepage:            https://github.com/MichielDeCuyper/Algebraic-Effect-Handlers/
+Bug-Reports:         https://github.com/MichielDeCuyper/Algebraic-Effect-Handlers/issues
 license:             MIT
 license-file:        LICENSE
 author:              Michiel De Cuyper
 maintainer:          Michiel.DeCuyper@student.kuleuven.be
--- copyright:           
+copyright:           (c) Michiel De Cuyper 2015
 category:            Control
 build-type:          Simple
 extra-source-files:  README.md
