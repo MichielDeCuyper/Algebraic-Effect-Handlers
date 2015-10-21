@@ -1,7 +1,7 @@
 {-#LANGUAGE GADTSyntax, RankNTypes, MultiParamTypeClasses, 
 FunctionalDependencies, FlexibleInstances, UndecidableInstances#-}
 
-module Typeclass.TermAlgebra(TermAlgebra) where
+module Typeclass.TermAlgebra(TermAlgebra(var, con)) where
 
 import Data.Free
 
