@@ -62,14 +62,16 @@ This library offers another approach, that of **algebraic effect handlers**, whi
 The goal of this library is to be user-friendly, complete and efficient.
 ### User-Friendly
 This library aims to be user-friendliness by offering smart constructors and easy-composable handlers.
-
+What happens behind the scenes will make use of complex typeclasses and functions, 
+but the API exposed to the user will be as easy as possible.
 ### Complete
 This library aims to be complete by offering the same functionality offered by standard Monad Transformers, 
 but even going further by exploring more exotic effects.
 
 ### Efficient
 The goal of this library is to match the efficiency of Monad Transformers. 
-It has no use to aim for slowe.
+It has no use to aim for slower. 
+The efficiency is achieved by *handler fusion*, described in *Fusion For Free* by T. Schrijvers (2015)
 
 ## A Gentle Introduction
 
