@@ -4,7 +4,7 @@ Library for Algebraic Effect Handlers in Haskell, as part of my Bachelor's thesi
 Based on *Fusion For Free* by prof. Tom Schrijvers.
 
 ## The problem
-Haskell functions are pure and thereby yield no side effects. 
+Haskell functions are pure and therefor yield no side effects, unless we want them to. 
 A function `Int -> Int -> Int` won't format your disk, as it has only works for Integers 
 (compared to e.g. a Java function `public int foo(int a, int b) {...}`, where you have no clue what happens on the inside).
 
@@ -30,8 +30,48 @@ The problem with monad composition is the following:
 instance (Monad f, Monag g) => Monad (f . g) where
   return = pure -- Derivable from applicative
   join :: f (g (f (g a))) -> f (g a)
-  join x = ... -- Not possible. We have something for f (f a) -> f a and g (g a) -> g a but not something for an alternating sequence
+  join x = undefined -- Not possible. We have something for f (f a) -> f a and g (g a) -> g a 
+               -- but not something for an alternating sequence
 ```
+
+The standard approach is the one of **monad transformers**, 
+where we redefine a monad inside a newtype with an extension to plug a new monad in. 
+
+```haskell
+-- Codebit 3: The StateT monad transformer
+newtype StateT s m a = St {runSt :: s -> m (s,a)} -- Big difference being the m in the runSt function
+lift m = St (\s -> 
+  do a <- m
+     return (a, s)
+
+instance Monad m => Monad (State s m) where
+  return x = lift (return x)
+  (>>=) m f = .. -- TODO
+ 
+get :: StateT s m s
+get = St (\s -> return (s,s))
+
+put :: StateT s m ()
+put s' = St (\s -> return ((), s'))
+```
+
+Every monad we want to extend requires this work (defining the newtype, the lift function, the monad instance,...).
+While there are libraries that do this work for you, lifting functions all the time isn't that efficient to do.
+
+This library offers another approach, that of **algebraic effect handlers**, which offer easier composability.
+The goal of this library is to be user-friendly, complete and efficient.
+### User-Friendly
+This library aims to be user-friendliness by offering smart constructors and easy-composable handlers.
+
+### Complete
+This library aims to be complete by offering the same functionality offered by standard Monad Transformers, 
+but even going further by exploring more exotic effects.
+
+### Efficient
+The goal of this library is to match the efficiency of Monad Transformers. 
+It has no use to aim for slowe.
+
+## A Gentle Introduction
 
 ## A First Approach
 
