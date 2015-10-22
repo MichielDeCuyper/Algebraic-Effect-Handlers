@@ -8,6 +8,6 @@ import Data.Free
 
 class (Monad m, TermAlgebra m f) => TermMonad m f | m -> f where
 
-instance (Monad m, TermAlgebra m f) => TermMonad m f where
+instance {-# OVERLAPPING #-} (Monad m, TermAlgebra m f) => TermMonad m f where
 
-instance Functor f => TermMonad (Free f) f where
+instance {-# OVERLAPPING #-} Functor f => TermMonad (Free f) f where

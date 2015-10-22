@@ -1,7 +1,7 @@
 {-# LANGUAGE GADTSyntax, TypeOperators, FlexibleInstances, MultiParamTypeClasses,
-UndecidableInstances#-}
+UndecidableInstances, IncoherentInstances#-}
 
-module Effect.State (State, StateCarrier, handleState) where
+module Effect.State (State(Get, Put), StateCarrier, handleState, con, var, algState, genState) where
 
 import Data.Free
 import Data.Codensity
@@ -20,11 +20,11 @@ instance Functor (State s) where
 newtype StateCarrier s m a = SC {unSC :: s -> m a}
 
 instance Functor m => Functor (StateCarrier s m) where
-	fmap f x = SC (fmap (fmap f) (unSC x))
+    fmap f x = SC (fmap (fmap f) (unSC x))
 
 instance TermMonad m f => TermAlgebra (StateCarrier s m) (State s + f) where
-	con = SC . (algState \/ con) . fmap unSC
-	var = SC . genState
+    con = SC . (algState \/ conState) . fmap unSC
+    var = SC . genState
 
 handleState :: TermMonad m f => Codensity (StateCarrier s m) a -> (s -> m a)
 handleState = unSC . runCod var
@@ -35,3 +35,6 @@ algState (Get k) s = k s s
  
 genState :: TermMonad m f => a -> (s -> m a)
 genState x = const (var x)
+
+conState :: (Functor g, TermAlgebra m g) => g (s -> m a) -> (s -> m a)
+conState op s = con (fmap (\m -> m s) op)
