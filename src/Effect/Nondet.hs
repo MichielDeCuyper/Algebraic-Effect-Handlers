@@ -15,6 +15,8 @@ data Nondet k where
 instance Functor Nondet where
     fmap f (Or x y) = Or (f x) (f y)
 
+newtype NondetCarrier m a = NDC {unNDC :: m [a]}
+
 coin :: Free Nondet Bool
 coin = Con(Or (Var True) (Var False))
 
@@ -30,7 +32,7 @@ algNondet (Or x y) =
 handleNondet :: TermMonad m g => Free (Nondet + g) a -> m [a]
 handleNondet = fold (algNondet \/ con) genNondet
 
---instance TermMonad m f => TermAlgebra m Nondet where
---    var = genNondet
---    con = algNondet
+instance TermMonad m f => TermAlgebra (NondetCarrier m) Nondet where
+    var = NDC . genNondet
+    con = NDC . algNondet . fmap unNDC
 
