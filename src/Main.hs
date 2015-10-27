@@ -3,6 +3,8 @@ module Main where
 import Data.Free
 import Effect.State
 import Effect.Void
+import Effect.Nondet
+import Data.Nondet
 import Typeclass.TermMonad
 
 main :: IO ()
