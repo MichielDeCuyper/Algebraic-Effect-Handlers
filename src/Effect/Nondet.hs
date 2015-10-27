@@ -17,7 +17,43 @@ data Nondet k where
 instance Functor Nondet where
     fmap f (Or x y) = Or (f x) (f y)
 
--- newtype NondetCarrier m a = NDC {unNDC :: m [a]}
+newtype NondetCarrier m a = NDC {unNDC :: m [a]}
+
+instance Functor m => Functor (NondetCarrier m) where
+    fmap f x =  NDC (fmap (fmap f) (unNDC x))
+
+instance TermMonad m2 f => TermAlgebra (NondetCarrier m2) (Nondet + f) where
+    con = NDC . (algNondet' \/ con) . fmap unNDC
+    var = NDC . genNondet'
+
+genNondet' :: TermMonad m f => a -> m [a]
+genNondet' x = var [x]
+
+algNondet' :: TermMonad m f => (Nondet (m [a])) -> m [a]
+algNondet' (Or x y) =
+            do  a <- x
+                b <- y
+                var (a ++ b)
+
+handleNondetCod :: Free (Nondet + g) a -> Identity (NondetCarrier m a)
+handleNondetCod = runCod gen'' . handleNondetCod'
+
+handleNondetCod' :: Free (Nondet + g) a -> Identity(Codensity (NondetCarrier m) a)
+handleNondetCod' = fold (algCod (alg'' \/ con)) var
+
+handleNondet' :: (TermAlgebra Identity g, TermMonad m g) => Free (Nondet + g) a -> Identity (NondetCarrier m a)
+handleNondet' = fold (alg'' \/ con) gen''
+
+alg'' :: TermMonad m g => (Nondet (Identity (NondetCarrier m a))) -> Identity (NondetCarrier m a)
+alg'' p = Id (NDC (algNondet' p))
+    where 
+        algNondet' (Or x y) =
+            do  a <- unNDC . runId $ x
+                b <- unNDC . runId $ y
+                var (a ++ b)
+
+gen'' :: TermMonad m f => a -> Identity (NondetCarrier m a)
+gen'' x = Id (NDC (var [x]))
 
 coin :: Free (Nondet + Void) Bool
 coin = Con(Inl( Or (Var True) (Var False)))
