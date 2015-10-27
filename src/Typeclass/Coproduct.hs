@@ -9,7 +9,7 @@ Stability: Experimental
 Portability: POSIX
 
 -}
-module Typeclass.Coproduct (type (+), (\/) ) where
+module Typeclass.Coproduct (type (+) (Inl, Inr), (\/) ) where
 
 -- | Coproduct
 --  The coproduct of two datatypes f and g is denoted as @f + g@

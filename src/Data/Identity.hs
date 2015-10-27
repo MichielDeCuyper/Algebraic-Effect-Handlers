@@ -1,6 +1,6 @@
 module Data.Identity where
 
-newtype Identity a = Id {runId :: a}
+newtype Identity a = Id {runId :: a} deriving Show
 
 instance Functor Identity where
     fmap f (Id a) = Id (f a) 

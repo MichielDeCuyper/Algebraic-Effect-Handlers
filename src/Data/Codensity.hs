@@ -1,7 +1,7 @@
 {-#LANGUAGE RankNTypes, DeriveFunctor, FlexibleInstances, UndecidableInstances, 
 MultiParamTypeClasses#-}
 
-module Data.Codensity(Codensity, runCod)where
+module Data.Codensity(Codensity, runCod, algCod)where
 
 import Typeclass.TermAlgebra
 import Typeclass.TermMonad
@@ -30,7 +30,7 @@ instance TermAlgebra h f => TermAlgebra (Codensity h) f where
 algCod :: Functor f => (forall x . f (h x) -> h x) -> (f (Codensity h a) -> Codensity h a)
 algCod alg op = Codensity (\k -> alg (fmap (\m -> unCod m k) op))
 
-instance TermAlgebra h f => TermMonad (Codensity h) f where
+instance {-# OVERLAPPING #-} TermAlgebra h f => TermMonad (Codensity h) f where
 
 
 
