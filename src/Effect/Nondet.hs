@@ -77,16 +77,3 @@ alg'' p = Id (NDC (algNondet' p))
 
 gen'' :: TermMonad m f => a -> Identity (NondetCarrier m a)
 gen'' x = Id (NDC (var [x]))
-
-
-
-
-
-
---handleNondetCod :: (TermAlgebra (NondetCarrier m) g, TermMonad m g) => Free (Nondet + g) a -> NondetCarrier m a
---handleNondetCod = runCod genNondet . handleNondetCod'
-
---handleNondetCod' :: (TermAlgebra (NondetCarrier m) g, TermMonad m g) => Free (Nondet + g) a -> Codensity (NondetCarrier m) a
---handleNondetCod' = fold (algCod (algNondet \/ con)) var
---handler :: (Functor f, Functor h) => Free f a -> h a
---handler = runCod genNondet . handler'
