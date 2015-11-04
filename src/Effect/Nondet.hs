@@ -64,16 +64,15 @@ handleNondetCod = runCod var . handleNondetCod'
 handleNondetCod' :: TermMonad m g => Free (Nondet + g) a -> Codensity (NondetCarrier m) a
 handleNondetCod' = fold (algCod con) var
 
-handleNondet' :: (TermAlgebra Identity g, TermMonad m g) => Free (Nondet + g) a -> Identity (NondetCarrier m a)
-handleNondet' = fold (alg'' \/ con) gen''
-
-alg'' :: TermMonad m g => (Nondet (Identity (NondetCarrier m a))) -> Identity (NondetCarrier m a)
-alg'' p = Id (NDC (algNondet' p))
+alg'' :: TermMonad m g => Nondet (NondetCarrier m a) -> NondetCarrier m a
+alg'' p = NDC (algNondet' p)
     where 
         algNondet' (Or x y) =
-            do  a <- unNDC . runId $ x
-                b <- unNDC . runId $ y
+            do  a <- unNDC $ x
+                b <- unNDC $ y
                 var (a ++ b)
 
-gen'' :: TermMonad m f => a -> Identity (NondetCarrier m a)
-gen'' x = Id (NDC (var [x]))
+gen'' :: TermMonad m f => a -> NondetCarrier m a
+gen'' x = NDC (var [x])
+
+
