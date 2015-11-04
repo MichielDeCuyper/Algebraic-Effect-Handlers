@@ -3,7 +3,7 @@ module Data.Identity where
 newtype Identity a = Id {runId :: a}
 
 instance Show a => Show (Identity a) where
-	show (Id x) = "id: " ++ show x-- for debug purposes
+    show (Id x) = "id: " ++ show x-- for debug purposes
 
 instance Functor Identity where
     fmap f (Id a) = Id (f a) 

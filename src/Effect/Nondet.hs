@@ -55,12 +55,14 @@ algNondet' (Or x y) =
                 var (a ++ b)
 
 ------------------------------------------------------
+runNondet :: Functor g => Free (Nondet + g) a -> Free g [a]
+runNondet = unNDC . handleNondetCod
 
-handleNondetCod :: Free (Nondet + g) a -> Identity (NondetCarrier m a)
-handleNondetCod = runCod gen'' . handleNondetCod'
+handleNondetCod :: Functor g => Free (Nondet + g) a -> NondetCarrier (Free g) a
+handleNondetCod = runCod var . handleNondetCod'
 
-handleNondetCod' :: Free (Nondet + g) a -> Identity(Codensity (NondetCarrier m) a)
-handleNondetCod' = fold (algCod (alg'' \/ con)) var
+handleNondetCod' :: TermMonad m g => Free (Nondet + g) a -> Codensity (NondetCarrier m) a
+handleNondetCod' = fold (algCod con) var
 
 handleNondet' :: (TermAlgebra Identity g, TermMonad m g) => Free (Nondet + g) a -> Identity (NondetCarrier m a)
 handleNondet' = fold (alg'' \/ con) gen''

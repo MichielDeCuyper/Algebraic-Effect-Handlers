@@ -1,6 +1,6 @@
 {-#LANGUAGE MultiParamTypeClasses#-}
 
-module Effect.Void (Void, handleVoid) where
+module Effect.Void (Void, handleVoid, runVoid) where
 
 import Data.Free
 import Data.Identity
@@ -11,6 +11,9 @@ data Void k
 
 instance Functor Void where
     fmap = undefined
+
+runVoid :: Free Void a -> a
+runVoid = runId . handleVoid
 
 handleVoid :: Free Void a -> Identity a
 handleVoid = fold undefined Id
