@@ -6,6 +6,7 @@ import Data.Free
 import Effect.State
 import Effect.Void
 import Effect.Nondet
+import Effect.LogState
 import Typeclass.TermMonad
 import Typeclass.Coproduct
 
