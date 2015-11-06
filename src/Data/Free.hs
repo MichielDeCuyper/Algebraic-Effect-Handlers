@@ -15,9 +15,9 @@ Free monads are a core concept in Algebraic Effect Handlers, as they denote the 
 module Data.Free (Free(Var, Con), fold) where
 
 -- | The free monad
--- The @Var@ constructor represents a pure computation
+-- The @Var@ constructor represents a variable
 --
--- The @Con@ constructor represents an impure computation
+-- The @Con@ constructor represents a computation
 data Free f a where
     Var :: a -> Free f a
     Con :: f (Free f a) -> Free f a 
@@ -37,6 +37,6 @@ instance Functor f =>  Monad (Free f) where
 
 -- | TODO
 -- 
-fold :: Functor f => (f b -> b) -> (a -> b) -> (Free f a -> b)
+fold :: Functor f => (f b -> b) -> (a -> b) -> Free f a -> b
 fold alg gen (Var x) = gen x
 fold alg gen (Con op) = alg (fmap (fold alg gen) op)

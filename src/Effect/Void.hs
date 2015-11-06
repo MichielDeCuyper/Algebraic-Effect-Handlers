@@ -22,4 +22,4 @@ instance TermAlgebra Identity Void where
     var = Id
     con = undefined
 
-instance TermMonad Identity Void where
+--instance TermMonad Identity Void where
