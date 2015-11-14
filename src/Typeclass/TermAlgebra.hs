@@ -1,5 +1,4 @@
-{-#LANGUAGE GADTSyntax, RankNTypes, MultiParamTypeClasses, 
-FunctionalDependencies, FlexibleInstances, UndecidableInstances#-}
+{-#LANGUAGE GADTSyntax, RankNTypes, MultiParamTypeClasses, FunctionalDependencies, FlexibleInstances, UndecidableInstances#-}
 
 module Typeclass.TermAlgebra(TermAlgebra(var, con)) where
 

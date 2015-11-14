@@ -21,7 +21,7 @@ newtype NondetCarrier m a = NDC {unNDC :: m [a]}
 instance Functor m => Functor (NondetCarrier m) where
     fmap f x =  NDC (fmap (fmap f) (unNDC x))
 
-instance TermMonad m2 f => TermAlgebra (NondetCarrier m2) (Nondet + f) where
+instance TermMonad m f => TermAlgebra (NondetCarrier m) (Nondet + f) where
     con = NDC . (algNondet \/ con) . fmap unNDC
     var = NDC . genNondet
 

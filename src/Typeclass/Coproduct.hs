@@ -1,4 +1,4 @@
-{-# LANGUAGE TypeOperators, GADTSyntax #-}
+{-# LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleInstances #-}
 {-|
 Module: Typeclass.Coproduct
 Description: Coproduct
@@ -9,7 +9,9 @@ Stability: Experimental
 Portability: POSIX
 
 -}
-module Typeclass.Coproduct (type (+) (Inl, Inr), (\/) ) where
+module Typeclass.Coproduct (type (+) (Inl, Inr), (\/), (:<), inject ) where
+
+import Data.Free
 
 -- | Coproduct
 --  The coproduct of two datatypes f and g is denoted as @f + g@
@@ -24,3 +26,33 @@ instance (Functor f, Functor g) => Functor (f + g) where
 (\/) :: (f b -> b) -> (g b -> b) -> ((f + g) b -> b)
 (\/) algF algG (Inl x) = algF x
 (\/) algF algG (Inr x) = algG x
+
+class (Functor sub, Functor sup) => sub :< sup where
+    inj :: sub a -> sup a
+    prj :: sup a -> Maybe (sub a)
+
+instance Functor f => f :< f where
+    inj = id
+    prj = Just
+
+instance (Functor f, Functor g) => f :< (f + g) where
+    inj = Inl
+    prj (Inl fa) = Just fa
+    prj _ = Nothing
+
+instance (Functor f, g :< sig) => g :< (f + sig) where
+    inj = Inr . inj
+    prj (Inr ga) = prj ga
+    prj _ = Nothing
+
+inject :: (sub :< sup) => sub (Free sup a) -> Free sup a
+inject = Con . inj
+
+project :: (sub :< sup) => Free sup a -> Maybe (sub (Free sup a))
+project (Con s) = prj s
+project _ = Nothing
+
+
+
+
+

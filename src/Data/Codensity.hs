@@ -1,5 +1,4 @@
-{-#LANGUAGE RankNTypes, DeriveFunctor, FlexibleInstances, UndecidableInstances, 
-MultiParamTypeClasses#-}
+{-#LANGUAGE RankNTypes, DeriveFunctor, FlexibleInstances, UndecidableInstances, MultiParamTypeClasses#-}
 
 module Data.Codensity(Codensity, runCod, algCod)where
 
@@ -27,7 +26,7 @@ instance TermAlgebra h f => TermAlgebra (Codensity h) f where
     var = return
     con = algCod con
 
-algCod :: Functor f => (forall x . f (h x) -> h x) -> (f (Codensity h a) -> Codensity h a)
+algCod :: Functor f => (forall x . f (h x) -> h x) -> f (Codensity h a) -> Codensity h a
 algCod alg op = Codensity (\k -> alg (fmap (\m -> unCod m k) op))
 
 instance {-# OVERLAPPING #-} TermAlgebra h f => TermMonad (Codensity h) f where

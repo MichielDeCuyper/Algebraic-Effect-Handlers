@@ -18,6 +18,10 @@ program n
     | n <= 0 = con (Inl(Get var))
     | otherwise = con (Inl(Get (\s -> con(Inl(Put (s + n) (program (n-1)))))))
 
+program' n
+    | n <= 0 = con (Get var)
+    | otherwise = con (Get (\s -> con(Put (s + n) (program' (n-1)))))
+
 
 ----coin :: Free (Nondet + Void) Bool
 coin _ = con(Inl( Or (var True) (var False)))

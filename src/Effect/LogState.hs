@@ -1,4 +1,4 @@
-{-#LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleContexts, UndecidableInstances, IncoherentInstances#-}
+{-#LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleInstances, FlexibleContexts, UndecidableInstances, IncoherentInstances#-}
 
 module Effect.LogState where
 
@@ -29,5 +29,23 @@ algLogState :: TermAlgebra m (Writer String + g) => State s (s -> m a) -> s -> m
 algLogState (Put s' k) s = con (Inl (Tell "put" (k s')))
 algLogState (Get k) s = k s s
 
-runLogState :: TermMonad m (Writer String + Void) => Codensity (LogStateCarrier s m) a -> (s -> m a)
+runLogState :: TermMonad m (Writer String + Void) => Codensity (LogStateCarrier s m) a -> s -> m a
 runLogState = unLSC . runCod var
+
+newtype WriterCarrier m w a = WC {unWC :: m (w, a)}
+
+instance Functor m => Functor (WriterCarrier m w) where
+    fmap f x = WC (fmap (fmap f) (unWC x)) 
+
+instance (Monoid w, TermMonad m f) => TermAlgebra (WriterCarrier m w) (Writer w + f) where
+    con = WC . (algWriter \/ con) . fmap unWC
+    var = WC . genWriter
+
+runWriter :: (Monoid w, TermMonad m f) => Codensity (WriterCarrier m w) a -> m (w, a)
+runWriter = unWC . runCod var
+
+genWriter :: (Monad m, Monoid w) => a -> m (w, a)
+genWriter x = return (mempty, x)
+
+algWriter :: (Monad m, Monoid w) => Writer w (m (w,a)) -> m (w, a)
+algWriter (Tell w k) = k >>= (\(w', x) -> return (w `mappend` w', x))

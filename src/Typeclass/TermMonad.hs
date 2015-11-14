@@ -1,5 +1,4 @@
-{-#LANGUAGE MultiParamTypeClasses, FunctionalDependencies, FlexibleInstances,
-UndecidableInstances#-}
+{-#LANGUAGE MultiParamTypeClasses, FunctionalDependencies, FlexibleInstances,UndecidableInstances#-}
 
 module Typeclass.TermMonad (TermMonad) where
 
