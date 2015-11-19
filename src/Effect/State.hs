@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTSyntax, TypeOperators, FlexibleInstances, MultiParamTypeClasses, UndecidableInstances, IncoherentInstances#-}
 
-module Effect.State (State(Get, Put), StateCarrier, runState, con, var, algState, genState) where
+module Effect.State (State(Get, Put), StateCarrier, runState, con, var, algState, genState, conState) where
 
 import Data.Free
 import Data.Codensity
@@ -33,7 +33,7 @@ algState (Put s' k) s = k s'
 algState (Get k) s = k s s
  
 genState :: TermMonad m f => a -> s -> m a
-genState x = const (var x)
+genState x = const (var x) -- == \_ -> var x
 
 conState :: (Functor g, TermAlgebra m g) => g (s -> m a) -> s -> m a
 conState op s = con (fmap (\m -> m s) op)
