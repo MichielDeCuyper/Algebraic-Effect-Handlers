@@ -13,6 +13,11 @@ import Data.Codensity
 data Nondet k where
     Or :: k -> k -> Nondet k
 
+
+or' :: (TermAlgebra h f, Nondet :< f) => h a -> h a -> h a
+or' p q = inject (Or p q)
+
+
 instance Functor Nondet where
     fmap f (Or x y) = Or (f x) (f y)
 
@@ -37,3 +42,6 @@ algNondet (Or x y) =
                 b <- y
                 var (a ++ b)
 
+
+coin :: (TermAlgebra h f, Nondet :< f) => h Bool
+coin = or' (var True) (var False)

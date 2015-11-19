@@ -27,6 +27,7 @@ instance (Functor f, Functor g) => Functor (f + g) where
 -- The junction operator dispenses two functions @left :: f b -> b@ and @right :: g b -> b@ over a composed datatype @f + g@
 --
 -- The function @left@ gets applied when the value of the composed datatype is of type @f@ (i.e. the left part of the coproduct).
+--
 -- The function @right@ gets applied when the value of the composed datatype is of type @g@ (i.e. the right part of the coproduct).
 (\/) :: (f b -> b) -> (g b -> b) -> ((f + g) b -> b)
 (\/) algF algG (Inl x) = algF x
@@ -50,7 +51,7 @@ instance {-# OVERLAPPING #-} (Functor f, g :< sig) => g :< (f + sig) where
     prj (Inr ga) = prj ga
     prj _ = Nothing
 
-inject :: (sub :< f, TermAlgebra h f) => sub (h a) -> (h a)
+inject :: (TermAlgebra h f, sub :< f) => sub (h a) -> h a
 inject = con . inj
 
 project :: (sub :< sup) => Free sup a -> Maybe (sub (Free sup a))

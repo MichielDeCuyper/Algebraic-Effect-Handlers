@@ -1,6 +1,6 @@
-{-# LANGUAGE GADTSyntax, TypeOperators, FlexibleInstances, MultiParamTypeClasses, UndecidableInstances, IncoherentInstances#-}
+{-# LANGUAGE GADTSyntax, TypeOperators, FlexibleInstances, MultiParamTypeClasses, UndecidableInstances, FlexibleContexts#-}
 
-module Effect.State (State(Get, Put), StateCarrier, runState, con, var, algState, genState, conState) where
+module Effect.State (State(Get, Put), get, put, StateCarrier, runState, con, var, algState, genState, conState) where
 
 import Data.Free
 import Data.Codensity
@@ -11,6 +11,12 @@ import Typeclass.TermMonad
 data State s k where
     Put :: s -> k -> State s k
     Get :: (s -> k) -> State s k
+
+get :: (TermAlgebra h f, State s :< f) => (s -> h a) -> h a
+get k = inject (Get k)
+
+put :: (TermAlgebra h f, State s :< f) => s -> h a -> h a
+put s k = inject (Put s k)
 
 instance Functor (State s) where
     fmap f (Put s k) = Put s (f k) 

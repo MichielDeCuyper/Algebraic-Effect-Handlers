@@ -1,6 +1,6 @@
 {-#LANGUAGE MultiParamTypeClasses#-}
 
-module Effect.Void (Void, runVoid) where
+module Effect.Void (Void, run) where
 
 import Data.Free
 import Data.Identity
@@ -13,8 +13,8 @@ data Void k
 instance Functor Void where
     fmap = undefined
 
-runVoid :: Codensity Identity c -> c
-runVoid = runId . runCod var
+run :: Codensity Identity c -> c
+run = runId . runCod var
 
 instance TermAlgebra Identity Void where
     var = Id
