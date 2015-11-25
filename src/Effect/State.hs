@@ -3,6 +3,7 @@
 module Effect.State (State(Get, Put), get, put, StateCarrier, runState, con, var, algState, genState, conState) where
 
 import Data.Free
+import Effect.Void
 import Data.Codensity
 import Typeclass.Coproduct
 import Typeclass.TermAlgebra
@@ -43,3 +44,8 @@ genState x = const (var x) -- == \_ -> var x
 
 conState :: (Functor g, TermAlgebra m g) => g (s -> m a) -> s -> m a
 conState op s = con (fmap (\m -> m s) op)
+
+example :: TermAlgebra h (State Int + Void) => Int -> h Int
+example n
+    | n <= 0 = get var
+    | otherwise = get (\a -> (put (a+n) (example (n-1))))

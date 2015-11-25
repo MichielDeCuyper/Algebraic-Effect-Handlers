@@ -13,7 +13,7 @@ import Typeclass.TermMonad
 import Typeclass.Coproduct
 
 main :: IO ()
-main = putStrLn "Y U NO WORK"
+main = putStrLn "Algebraic Effect Handlers"
 
 program n
     | n <= 0 = con (Inl(Get var))
@@ -23,9 +23,10 @@ program' n
     | n <= 0 = con (Get var)
     | otherwise = con (Get (\s -> con(Put (s + n) (program' (n-1)))))
 
+program_ :: TermAlgebra h (State Int + Void) => Int -> h Int
 program_ n
     | n <= 0 = get var
-    | otherwise = get (\a -> put (a+n) (program_ (n-1)))
+    | otherwise = get (\a -> (put (a+n) (program_ (n-1))))
 
 example n = run $ (runState $ program 0) n
 
