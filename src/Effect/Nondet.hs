@@ -2,12 +2,10 @@
 
 module Effect.Nondet where
 
-import Data.Free
 import Effect.Void
 import Typeclass.Coproduct
 import Typeclass.TermAlgebra
 import Typeclass.TermMonad
-import Data.Identity
 import Data.Codensity
 
 data Nondet k where

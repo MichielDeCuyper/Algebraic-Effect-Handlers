@@ -9,7 +9,6 @@ Stability: Experimental
 -}
 module Typeclass.Coproduct (type (+) (Inl, Inr), (\/), (:<), inject ) where
 
-import Data.Free
 import Typeclass.TermAlgebra
 import Typeclass.TermMonad
 -- | Coproduct
@@ -54,9 +53,10 @@ instance {-# OVERLAPPING #-} (Functor f, g :< sig) => g :< (f + sig) where
 inject :: (TermAlgebra h f, sub :< f) => sub (h a) -> h a
 inject = con . inj
 
-project :: (sub :< sup) => Free sup a -> Maybe (sub (Free sup a))
-project (Con s) = prj s
-project _ = Nothing
+-- TODO
+--project :: (sub :< sup) => Free sup a -> Maybe (sub (Free sup a))
+--project (Con s) = prj s
+--project _ = Nothing
 
 
 

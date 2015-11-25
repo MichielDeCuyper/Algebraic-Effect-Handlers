@@ -18,8 +18,7 @@ extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
-  exposed-modules: Main, Data.Free, Effect.Void, Effect.State, Effect.Writer, Typeclass.Coproduct,
-    Typeclass.TermAlgebra, Typeclass.TermMonad     
+  exposed-modules: Main, Data.Codensity, Effect.Reader, Effect.LogState, Effect.Nondet, Effect.Void, Effect.State, Effect.Writer, Typeclass.Coproduct, Typeclass.TermAlgebra, Typeclass.TermMonad     
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9

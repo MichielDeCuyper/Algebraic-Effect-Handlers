@@ -2,8 +2,6 @@
 
 module Effect.Void (Void, run) where
 
-import Data.Free
-import Data.Identity
 import Data.Codensity
 import Typeclass.TermMonad
 import Typeclass.TermAlgebra
@@ -13,9 +11,14 @@ data Void k
 instance Functor Void where
     fmap = undefined
 
-run :: Codensity Identity c -> c
-run = runId . runCod var
+newtype VoidCarrier a = VC {unVC :: a}
 
-instance TermAlgebra Identity Void where
-    var = Id
+instance Functor VoidCarrier where
+    fmap f x =  VC (f (unVC x))
+
+run :: Codensity VoidCarrier c -> c
+run = unVC . runCod var
+
+instance TermAlgebra VoidCarrier Void where
+    var = VC
     con = undefined

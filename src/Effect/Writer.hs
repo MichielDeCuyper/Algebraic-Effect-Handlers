@@ -43,16 +43,17 @@ data Writer w k where
 -- 
 -- Usage: @tell w k@
 --
--- Example
+-- = Example
 -- 
 -- @let x = tell "abc" (var 123) :: TermAlgebra h (Writer String + Void) => h Int@
 --
--- @run . runWriter $ x == ("abc", 123)@
+--  >>> run . runWriter $ x
+-- ("abc", 123)
 --
 -- @let y = tell "xyz" x :: TermAlgebra h (Writer String + Void) => h Int@
 --
--- @run . runWriter $ y == ("xyzabc", 123)@
--- 
+-- >>> run . runWriter $ y
+-- ("xyzabc", 123)
 tell :: (TermAlgebra h f, Writer w :< f) => w -> h a -> h a
 tell w k = inject (Tell w k)
 

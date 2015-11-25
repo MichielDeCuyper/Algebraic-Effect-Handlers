@@ -2,7 +2,6 @@
 
 module Effect.State (State(Get, Put), get, put, StateCarrier, runState, con, var, algState, genState, conState) where
 
-import Data.Free
 import Effect.Void
 import Data.Codensity
 import Typeclass.Coproduct
