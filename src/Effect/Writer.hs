@@ -74,10 +74,10 @@ instance (Monoid w, TermMonad m f) => TermAlgebra (WriterCarrier m w) (Writer w 
 runWriter :: (Monoid w, TermMonad m f) => Codensity (WriterCarrier m w) a -> m (w, a)
 runWriter = unWC . runCod var
 
-genWriter :: (Monad m, Monoid w) => a -> m (w, a)
+genWriter :: (TermMonad m f, Monoid w) => a -> m (w, a)
 genWriter x = return (mempty, x)
 
-algWriter :: (Monad m, Monoid w) => Writer w (m (w,a)) -> m (w, a)
+algWriter :: (TermMonad m f, Monoid w) => Writer w (m (w,a)) -> m (w, a)
 algWriter (Tell w k) = k >>= (\(w', x) -> return (w `mappend` w', x))
 
 ------ This works! Order of effects matters!

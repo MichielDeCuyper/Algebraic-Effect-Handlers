@@ -1,0 +1,11 @@
+Vragen vrijdag 26/11
+--------------------
+
+- Error.hs
+	. TermAlgebra (Either e) f dependency
+
+- Reader.hs
+	. Datatype constructor
+
+- Algemeen
+	. do notatie mogelijk?
