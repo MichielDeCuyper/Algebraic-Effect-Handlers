@@ -18,7 +18,7 @@ instance (Functor f, Functor g, TermMonad m f, TermAlgebra m (Writer String + g)
     var = LSC . genState
     con = LSC . (algLogState \/ conLogState) . fmap unLSC
 
-algLogState :: (Functor g, TermAlgebra m (Writer String + g)) => State s (s -> m a) -> s -> m a
+algLogState :: (Functor g, TermMonad m (Writer String + g)) => State s (s -> m a) -> s -> m a
 algLogState (Put s' k) s = tell "put" (k s')
 algLogState (Get k) s = k s s
 

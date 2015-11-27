@@ -14,6 +14,8 @@ Maintainer: Michiel.DeCuyper@student.kuleuven.be
 Stability: Experimental
 -}
 
+-- Carriers van vorm s -> m (f a)
+
 module Effect.Error (
 
     -- * Datatype
@@ -36,25 +38,27 @@ data Error e k where
     Throw :: e -> Error e k
 
 instance Functor (Error e) where
-    fmap _ (Throw e) = Throw e
+    fmap f (Throw e) = Throw e
 
-newtype ErrorCarrier e m a = EC {unEC :: Either e (m a)}
+newtype ErrorCarrier e m a = EC {unEC :: m (Either e a)}
 
 instance Functor m => Functor (ErrorCarrier e m) where
     fmap f x = EC (fmap (fmap f) (unEC x)) 
 
-instance (TermMonad m f, TermAlgebra (Either e) f) => TermAlgebra (ErrorCarrier e m) (Error e + f) where
+instance TermMonad m f => TermAlgebra (ErrorCarrier e m) (Error e + f) where
     con = EC . (algError \/ con) . fmap unEC
     var = EC . genError
 
 throw :: (TermAlgebra h f, Error e :< f) => e -> h a
 throw e = inject (Throw e)
 
-genError :: Monad m => a -> Either e (m a)
-genError x = Right (return x)
+genError :: TermMonad m f => a -> m (Either e a)
+genError x = var (Right x)
 
-algError :: TermMonad m f => Error e (Either e (m a)) -> Either e (m a)
-algError (Throw k) = Left k
+algError :: TermMonad m f => Error e (m (Either e a)) -> m (Either e a)
+algError (Throw e) = var (Left e)
 
-runError :: (TermMonad m f, TermAlgebra (Either e) f) => Codensity (ErrorCarrier e m) a -> Either e (m a)
+runError :: TermMonad m f => Codensity (ErrorCarrier e m) a -> m (Either e a)
 runError = unEC . runCod var
+
+

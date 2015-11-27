@@ -12,11 +12,11 @@ data State s k where
     Put :: s -> k -> State s k
     Get :: (s -> k) -> State s k
 
-get :: (TermAlgebra h f, State s :< f) => (s -> h a) -> h a
-get k = inject (Get k)
+get :: (TermMonad h f, State s :< f) => h s
+get = inject (Get var)
 
-put :: (TermAlgebra h f, State s :< f) => s -> h a -> h a
-put s k = inject (Put s k)
+put :: (TermMonad h f, State s :< f) => s -> h ()
+put s = inject (Put s (var ()))
 
 instance Functor (State s) where
     fmap f (Put s k) = Put s (f k) 
@@ -44,7 +44,11 @@ genState x = const (var x) -- == \_ -> var x
 conState :: (Functor g, TermAlgebra m g) => g (s -> m a) -> s -> m a
 conState op s = con (fmap (\m -> m s) op)
 
-example :: TermAlgebra h (State Int + Void) => Int -> h Int
+example :: TermMonad h (State Int + Void) => Int -> h Int
 example n
-    | n <= 0 = get var
-    | otherwise = get (\a -> (put (a+n) (example (n-1))))
+    | n <= 0 = get
+    | otherwise = do a <- get 
+                     put (a+n) 
+                     example (n-1)
+
+

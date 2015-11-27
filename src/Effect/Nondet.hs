@@ -11,10 +11,8 @@ import Data.Codensity
 data Nondet k where
     Or :: k -> k -> Nondet k
 
-
 or' :: (TermAlgebra h f, Nondet :< f) => h a -> h a -> h a
 or' p q = inject (Or p q)
-
 
 instance Functor Nondet where
     fmap f (Or x y) = Or (f x) (f y)
