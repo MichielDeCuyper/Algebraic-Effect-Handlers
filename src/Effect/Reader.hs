@@ -8,10 +8,13 @@ import Typeclass.TermMonad
 import Typeclass.TermAlgebra
 
 data Reader e k where
-    Ask :: (e -> e) -> k -> Reader e k
+    Ask :: (e -> k) -> Reader e k
+
+ask :: (TermMonad m f, Reader e :< f) => m e
+ask = inject (Ask var)
 
 instance Functor (Reader e) where
-    fmap f (Ask e k) = Ask e (f k) 
+    fmap f (Ask g) = Ask (f . g)
 
 newtype ReaderCarrier m e a = RC {unRC :: e -> m a}
 
@@ -26,7 +29,7 @@ genReader :: TermMonad m f => a -> e -> m a
 genReader x = const (var x)
 
 algReader :: TermMonad m f => Reader e (e -> m a) -> e -> m a
-algReader (Ask f k) e = k e
+algReader (Ask g) e = g e e
 
 runReader :: TermMonad m f => Codensity (ReaderCarrier m e) a -> e -> m a
 runReader = unRC . runCod var 

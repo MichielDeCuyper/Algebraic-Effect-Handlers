@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTSyntax, TypeOperators, FlexibleInstances, MultiParamTypeClasses, UndecidableInstances, FlexibleContexts#-}
 
-module Effect.State (State(Get, Put), get, put, StateCarrier, runState, con, var, algState, genState, conState) where
+module Effect.State (State(Get, Put), get, put, StateCarrier, runState, con, var, algState, genState, conState, example) where
 
 import Effect.Void
 import Data.Codensity

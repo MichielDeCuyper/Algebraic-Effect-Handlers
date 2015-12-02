@@ -54,8 +54,8 @@ data Writer w k where
 --
 -- >>> run . runWriter $ y
 -- ("xyzabc", 123)
-tell :: (TermAlgebra h f, Writer w :< f) => w -> h a -> h a
-tell w k = inject (Tell w k)
+tell :: (TermAlgebra h f, Writer w :< f) => w -> h ()
+tell w = inject (Tell w (var ()))
 
 instance Functor (Writer w) where
     fmap f (Tell w k) = Tell w (f k) 

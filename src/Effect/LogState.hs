@@ -1,4 +1,10 @@
-{-#LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleInstances, FlexibleContexts, UndecidableInstances, IncoherentInstances, AllowAmbiguousTypes#-}
+{-#LANGUAGE TypeOperators #-}
+{-#LANGUAGE GADTSyntax #-}
+{-#LANGUAGE MultiParamTypeClasses #-} 
+{-#LANGUAGE FlexibleInstances #-}
+{-#LANGUAGE FlexibleContexts #-}
+{-#LANGUAGE UndecidableInstances #-}
+{-#LANGUAGE AllowAmbiguousTypes #-}
 
 module Effect.LogState where
 
@@ -19,7 +25,7 @@ instance (Functor f, Functor g, TermMonad m f, TermAlgebra m (Writer String + g)
     con = LSC . (algLogState \/ conLogState) . fmap unLSC
 
 algLogState :: (Functor g, TermMonad m (Writer String + g)) => State s (s -> m a) -> s -> m a
-algLogState (Put s' k) s = tell "put" (k s')
+algLogState (Put s' k) s = con(Inl(Tell "put" (k s')))
 algLogState (Get k) s = k s s
 
 runLogState :: (Functor f, TermMonad m (Writer String + f)) => Codensity (LogStateCarrier s m) a -> s -> m a

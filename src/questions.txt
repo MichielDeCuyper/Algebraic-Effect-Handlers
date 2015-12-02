@@ -2,19 +2,24 @@ Vragen vrijdag 27/11
 --------------------
 
 - Error.hs
-	. TermAlgebra (Either e) f dependency
+	. TermAlgebra (Either e) f dependency (Opgelost: verkeerde carrier)
 
 - Reader.hs
-	. Datatype constructor
+	. Datatype constructor (Fixed)
 
 - LogState.hs
-	. Typeclass constraint (e-mail)
+	. Typeclass constraint (e-mail) (Werkt)
 
 - Algemeen
-	. do notatie mogelijk?
-	. Scoping problemen? (à la Effect Handlers in Scope)
+	. do notatie mogelijk? (Fixed)
+	. Scoping problemen? (à la Effect Handlers in Scope) (Zien we later wel)
 
 ---------------------
 Presentatie: 7/12 samen met Mathias & Vincent (WV Lokaal)
 
 Afspraak met Yannick: Woe 9/12 om 11u
+
+Vragen 9/12
+-------------
+- LogState.hs
+	. Keuze van wat geprint wordt (ipv. Static put)
