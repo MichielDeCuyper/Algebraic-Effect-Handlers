@@ -20,7 +20,11 @@ newtype LogStateCarrier s m a = LSC {unLSC :: s -> m a}
 instance Functor m => Functor (LogStateCarrier s m) where
     fmap f x = LSC (fmap (fmap f) (unLSC x)) 
 
-instance (Functor f, Functor g, TermMonad m f, TermAlgebra m (Writer String + g)) => TermAlgebra (LogStateCarrier s m) (State s + f) where
+--instance (Functor f, Functor g, TermMonad m f, TermAlgebra m (Writer String + g)) => TermAlgebra (LogStateCarrier s m) (State s + f) where
+--    var = LSC . genState
+--    con = LSC . (algLogState \/ conLogState) . fmap unLSC
+
+instance (Functor f, TermMonad m (Writer String + f)) => TermAlgebra (LogStateCarrier s m) (State s + Writer String + f) where
     var = LSC . genState
     con = LSC . (algLogState \/ conLogState) . fmap unLSC
 
@@ -28,7 +32,7 @@ algLogState :: (Functor g, TermMonad m (Writer String + g)) => State s (s -> m a
 algLogState (Put s' k) s = con(Inl(Tell "put" (k s')))
 algLogState (Get k) s = k s s
 
-runLogState :: (Functor f, TermMonad m (Writer String + f)) => Codensity (LogStateCarrier s m) a -> s -> m a
+runLogState :: (Functor f, TermMonad m (Writer String +f)) => Codensity (LogStateCarrier s m) a -> s -> m a
 runLogState = unLSC . runCod var
 
 conLogState :: TermAlgebra m f => f (s -> m a) -> s -> m a
