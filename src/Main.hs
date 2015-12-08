@@ -31,7 +31,7 @@ exa n
     | n <= 0 = get
     | otherwise = do a <- get 
                      put (a+n)
-                     tell ("put value: " ++ show a ++ "+" ++ show n ++ " = " ++ show (a+n) ++ ". \n")
+                     tell ("put value: " ++ show a ++ "+" ++ show n ++ " = " ++ show (a+n) ++ ". ")
                      exa (n-1)
 
 count :: TermMonad h (State Int + Void) => h Int
@@ -43,3 +43,8 @@ count = do i <- get
 greeter :: TermMonad m (Reader String + Void) => m String
 greeter = do name <- ask
              return ("Hello " ++ name)
+
+
+catch :: (TermMonad h f, Error e :< f) => h a -> (e -> h a) -> h a
+catch = undefined
+
