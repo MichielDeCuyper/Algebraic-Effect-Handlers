@@ -22,4 +22,17 @@ Afspraak met Yannick: Woe 9/12 om 11u
 Vragen 9/12
 -------------
 - LogState.hs
-	. Keuze van wat geprint wordt (ipv. Static put)
+	. Functional Dependecy
+
+- RWS.hs
+	. Smart constructors ambiguous
+
+- Error.hs
+	. catch (nodig? Mogelijk? hoe?)
+
+- Algemeen
+	. Publiceerbaar?
+
+local, catch, listen als handler
+
+seintje na examens

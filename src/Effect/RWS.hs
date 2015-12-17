@@ -5,6 +5,7 @@
 {-#LANGUAGE FlexibleContexts #-}
 {-#LANGUAGE UndecidableInstances #-}
 {-#LANGUAGE AllowAmbiguousTypes #-}
+{-#LANGUAGE ScopedTypeVariables #-}
 
 module Effect.RWS where
 
@@ -21,21 +22,21 @@ data RWS r w s k where
 
 instance Functor (RWS r w s) where
     fmap f (Ask g)    = Ask (f . g)
-    fmap f (Tell w k) = Tell w (f k) 
-    fmap f (Put s k)  = Put s (f k) 
+    fmap f (Tell w k) = Tell w (f k)
+    fmap f (Put s k)  = Put s (f k)
     fmap f (Get k)    = Get (f . k)
 
-ask :: (TermMonad m f, RWS r w s :< f) => m r
-ask = inject (Ask var)
+ask :: forall m f r w s. (TermMonad m f, RWS r w s :< f) => m r
+ask = inject (Ask var :: RWS r w s (m r))
 
-tell :: (TermAlgebra h f, RWS r w s :< f) => w -> h ()
-tell w = inject (Tell w (var ()))
+tell :: forall m f r w s. (TermMonad m f, RWS r w s :< f) => w -> m ()
+tell w = inject (Tell w (var ()) :: RWS r w s (m ()))
 
-get :: (TermMonad h f, RWS r w s :< f) => h s
-get = inject (Get var)
+get :: forall m f r w s. (TermMonad m f, RWS r w s :< f) => m s
+get = inject (Get var :: RWS r w s (m s))
 
-put :: (TermMonad h f, RWS r w s :< f) => s -> h ()
-put s = inject (Put s (var ()))
+put :: forall m f r w s.(TermMonad m f, RWS r w s :< f) => s -> m ()
+put s = inject (Put s (var ()) :: RWS r w s (m ()))
 
 newtype RWSCarrier r w s m a = RWSC {unRWS :: r -> s -> m (w, a)}
 
@@ -59,6 +60,5 @@ algRWS :: (Monoid w, TermMonad m f) => RWS r w s (r -> s -> m (w, a)) -> (r -> s
 algRWS (Ask g) r s = g r r s
 algRWS (Tell w k) r s = let a = k r s
                         in a >>= \(w', x) -> return (w' `mappend` w, x)
-algRWS (Get k) r s = k s r s
-algRWS (Put s' k) r s = k r s'
-
+algRWS (Get g) r s = g s r s
+algRWS (Put s' k) r _ = k r s'
