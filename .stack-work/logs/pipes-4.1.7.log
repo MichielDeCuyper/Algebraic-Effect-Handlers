@@ -1,0 +1,377 @@
+Configuring pipes-4.1.7...
+Building pipes-4.1.7...
+Preprocessing library pipes-4.1.7...
+[1 of 6] Compiling Pipes.Internal   ( src/Pipes/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes/Internal.o )
+
+src/Pipes/Internal.hs:38:1: Warning:
+    The import of ‘<*>, pure, Applicative, *>’
+    from module ‘Control.Applicative’ is redundant
+
+src/Pipes/Internal.hs:44:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Pipes/Internal.hs:48:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+src/Pipes/Internal.hs:106:5: Warning:
+    Rule "_bind (Request a' k) f" may never fire
+      because ‘_bind’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘_bind’
+
+src/Pipes/Internal.hs:108:5: Warning:
+    Rule "_bind (Respond b  k) f" may never fire
+      because ‘_bind’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘_bind’
+
+src/Pipes/Internal.hs:110:5: Warning:
+    Rule "_bind (M          m) f" may never fire
+      because ‘_bind’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘_bind’
+
+src/Pipes/Internal.hs:112:5: Warning:
+    Rule "_bind (Pure    r   ) f" may never fire
+      because ‘_bind’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘_bind’
+[2 of 6] Compiling Pipes.Core       ( src/Pipes/Core.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes/Core.o )
+
+src/Pipes/Core.hs:326:5: Warning:
+    Rule "(Request x' fx ) //> fb" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:328:5: Warning:
+    Rule "(Respond b  fb') //> fb" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:330:5: Warning:
+    Rule "(M          m  ) //> fb" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:332:5: Warning:
+    Rule "(Pure      a   ) //> fb" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:458:5: Warning:
+    Rule "fb' >\ (Request b' fb )" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:460:5: Warning:
+    Rule "fb' >\ (Respond x  fx')" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:462:5: Warning:
+    Rule "fb' >\ (M          m  )" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:464:5: Warning:
+    Rule "fb' >\ (Pure    a    )" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:870:5: Warning:
+    Rule "(p //> f) //> g" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:872:5: Warning:
+    Rule "p //> respond" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:874:5: Warning:
+    Rule "respond x //> f" may never fire
+      because ‘//>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘//>’
+
+src/Pipes/Core.hs:876:5: Warning:
+    Rule "f >\ (g >\ p)" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:878:5: Warning:
+    Rule "request >\ p" may never fire because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:880:5: Warning:
+    Rule "f >\ request x" may never fire
+      because ‘>\\’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>\\’
+
+src/Pipes/Core.hs:882:5: Warning:
+    Rule "(p >>~ f) >>~ g" may never fire
+      because ‘>>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>>~’
+
+src/Pipes/Core.hs:884:5: Warning:
+    Rule "p >>~ push" may never fire because ‘>>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>>~’
+
+src/Pipes/Core.hs:886:5: Warning:
+    Rule "push x >>~ f" may never fire because ‘>>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>>~’
+
+src/Pipes/Core.hs:888:5: Warning:
+    Rule "f +>> (g +>> p)" may never fire
+      because ‘+>>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘+>>’
+
+src/Pipes/Core.hs:890:5: Warning:
+    Rule "pull +>> p" may never fire because ‘+>>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘+>>’
+
+src/Pipes/Core.hs:892:5: Warning:
+    Rule "f +>> pull x" may never fire because ‘+>>’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘+>>’
+[3 of 6] Compiling Pipes.Lift       ( src/Pipes/Lift.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes/Lift.o )
+
+src/Pipes/Lift.hs:50:1: Warning:
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+src/Pipes/Lift.hs:56:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+src/Pipes/Lift.hs:81:18: Warning:
+    In the use of type constructor or class ‘E.Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:83:25: Warning:
+    In the use of type constructor or class ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:86:12: Warning:
+    In the use of data constructor ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:91:18: Warning:
+    In the use of type constructor or class ‘E.Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:92:25: Warning:
+    In the use of type constructor or class ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:94:16: Warning:
+    In the use of ‘E.runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:99:18: Warning:
+    In the use of type constructor or class ‘E.Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:100:25: Warning:
+    In the use of type constructor or class ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:102:31: Warning:
+    In the use of type constructor or class ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:104:25: Warning:
+    In the use of type constructor or class ‘E.ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:105:27: Warning:
+    In the use of ‘E.runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes/Lift.hs:106:5: Warning:
+    In the use of ‘E.catchError’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[4 of 6] Compiling Pipes            ( src/Pipes.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes.o )
+
+src/Pipes.hs:67:1: Warning:
+    The import of ‘<*>, pure, Applicative’
+    from module ‘Control.Applicative’ is redundant
+
+src/Pipes.hs:69:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+src/Pipes.hs:75:1: Warning:
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+src/Pipes.hs:80:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+src/Pipes.hs:520:22: Warning:
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes.hs:522:21: Warning:
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+src/Pipes.hs:174:5: Warning:
+    Rule "for (for p f) g" may never fire
+      because ‘for’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘for’
+
+src/Pipes.hs:176:5: Warning:
+    Rule "for p yield" may never fire because ‘for’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘for’
+
+src/Pipes.hs:178:5: Warning:
+    Rule "for (yield x) f" may never fire
+      because ‘for’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘for’
+
+src/Pipes.hs:180:5: Warning:
+    Rule "for cat f" may never fire because ‘for’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘for’
+
+src/Pipes.hs:188:5: Warning:
+    Rule "f >~ (g >~ p)" may never fire because ‘>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>~’
+
+src/Pipes.hs:190:5: Warning:
+    Rule "await >~ p" may never fire because ‘>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>~’
+
+src/Pipes.hs:192:5: Warning:
+    Rule "p >~ await" may never fire because ‘>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>~’
+
+src/Pipes.hs:194:5: Warning:
+    Rule "m >~ cat" may never fire because ‘>~’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>~’
+
+src/Pipes.hs:202:5: Warning:
+    Rule "p1 >-> (p2 >-> p3)" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes.hs:205:5: Warning:
+    Rule "p >-> cat" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes.hs:207:5: Warning:
+    Rule "cat >-> p" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+[5 of 6] Compiling Pipes.Prelude    ( src/Pipes/Prelude.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes/Prelude.o )
+
+src/Pipes/Prelude.hs:104:1: Warning:
+    The import of ‘replicateM_’
+    from module ‘Control.Monad’ is redundant
+
+src/Pipes/Prelude.hs:418:3: Warning:
+    This binding for ‘loop’ shadows the existing binding
+      defined at src/Pipes/Prelude.hs:607:1
+
+src/Pipes/Prelude.hs:472:5: Warning:
+    This binding for ‘loop’ shadows the existing binding
+      defined at src/Pipes/Prelude.hs:607:1
+
+src/Pipes/Prelude.hs:202:3: Warning:
+    Rule "repeatM m >-> p" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:256:5: Warning:
+    Rule "p >-> stdoutLn'" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:266:5: Warning:
+    Rule "p >-> mapM_ f" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:276:5: Warning:
+    Rule "p >-> print" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:286:5: Warning:
+    Rule "p >-> toHandle handle" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:296:5: Warning:
+    Rule "p >-> drain" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:324:5: Warning:
+    Rule "p >-> map f" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:326:5: Warning:
+    Rule "map f >-> p" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:344:5: Warning:
+    Rule "p >-> mapM f" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:348:5: Warning:
+    Rule "mapM f >-> p" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:367:5: Warning:
+    Rule "p >-> mapFoldable f" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:382:5: Warning:
+    Rule "p >-> filter predicate" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:400:5: Warning:
+    Rule "p >-> filterM predicate" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:503:5: Warning:
+    Rule "p >-> concat" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:565:5: Warning:
+    Rule "p >-> chain f" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:569:5: Warning:
+    Rule "chain f >-> p" may never fire
+      because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+
+src/Pipes/Prelude.hs:584:5: Warning:
+    Rule "p >-> read" may never fire because ‘>->’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma on ‘>->’
+[6 of 6] Compiling Pipes.Tutorial   ( src/Pipes/Tutorial.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Pipes/Tutorial.o )
+
+src/Pipes/Tutorial.hs:93:1: Warning:
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+In-place registering pipes-4.1.7...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/pipes-4.1.7-G8sjOXxyfDi3zRO6QYDG9h
+Registering pipes-4.1.7...

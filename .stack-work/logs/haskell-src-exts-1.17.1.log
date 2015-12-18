@@ -1,0 +1,70 @@
+Configuring haskell-src-exts-1.17.1...
+Building haskell-src-exts-1.17.1...
+Preprocessing library haskell-src-exts-1.17.1...
+unused rules: 3
+[ 1 of 24] Compiling Language.Haskell.Exts.Annotated.Syntax ( src/Language/Haskell/Exts/Annotated/Syntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Syntax.o )
+
+src/Language/Haskell/Exts/Annotated/Syntax.hs:112:1: Warning:
+    The import of ‘Data.Foldable’ is redundant
+      except perhaps to import instances from ‘Data.Foldable’
+    To import instances alone, use: import Data.Foldable()
+
+src/Language/Haskell/Exts/Annotated/Syntax.hs:113:1: Warning:
+    The import of ‘Data.Traversable’ is redundant
+      except perhaps to import instances from ‘Data.Traversable’
+    To import instances alone, use: import Data.Traversable()
+[ 2 of 24] Compiling Language.Haskell.Exts.ParseSyntax ( src/Language/Haskell/Exts/ParseSyntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/ParseSyntax.o )
+[ 3 of 24] Compiling Language.Haskell.Exts.Annotated.Build ( src/Language/Haskell/Exts/Annotated/Build.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Build.o )
+[ 4 of 24] Compiling Language.Haskell.Exts.SrcLoc ( src/Language/Haskell/Exts/SrcLoc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/SrcLoc.o )
+[ 5 of 24] Compiling Language.Haskell.Exts.Comments ( src/Language/Haskell/Exts/Comments.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Comments.o )
+[ 6 of 24] Compiling Language.Haskell.Exts.Annotated.ExactPrint ( src/Language/Haskell/Exts/Annotated/ExactPrint.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/ExactPrint.o )
+
+src/Language/Haskell/Exts/Annotated/ExactPrint.hs:27:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[ 7 of 24] Compiling Language.Haskell.Exts.Annotated.Comments ( src/Language/Haskell/Exts/Annotated/Comments.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Comments.o )
+[ 8 of 24] Compiling Language.Haskell.Exts.Extension ( src/Language/Haskell/Exts/Extension.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Extension.o )
+
+src/Language/Haskell/Exts/Extension.hs:42:1: Warning:
+    The import of ‘<$>’ from module ‘Control.Applicative’ is redundant
+[ 9 of 24] Compiling Language.Haskell.Exts.ExtScheme ( src/Language/Haskell/Exts/ExtScheme.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/ExtScheme.o )
+[10 of 24] Compiling Language.Haskell.Exts.Syntax ( src/Language/Haskell/Exts/Syntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Syntax.o )
+[11 of 24] Compiling Language.Haskell.Exts.Build ( src/Language/Haskell/Exts/Build.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Build.o )
+[12 of 24] Compiling Language.Haskell.Exts.Fixity ( src/Language/Haskell/Exts/Fixity.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Fixity.o )
+[13 of 24] Compiling Language.Haskell.Exts.ParseMonad ( src/Language/Haskell/Exts/ParseMonad.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/ParseMonad.o )
+
+src/Language/Haskell/Exts/ParseMonad.hs:45:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+src/Language/Haskell/Exts/ParseMonad.hs:47:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+[14 of 24] Compiling Language.Haskell.Exts.InternalLexer ( src/Language/Haskell/Exts/InternalLexer.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/InternalLexer.o )
+[15 of 24] Compiling Language.Haskell.Exts.Lexer ( src/Language/Haskell/Exts/Lexer.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Lexer.o )
+[16 of 24] Compiling Language.Haskell.Exts.Annotated.Simplify ( src/Language/Haskell/Exts/Annotated/Simplify.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Simplify.o )
+[17 of 24] Compiling Language.Haskell.Exts.Pretty ( src/Language/Haskell/Exts/Pretty.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Pretty.o )
+
+src/Language/Haskell/Exts/Pretty.hs:39:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[18 of 24] Compiling Language.Haskell.Exts.ParseUtils ( src/Language/Haskell/Exts/ParseUtils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/ParseUtils.o )
+
+src/Language/Haskell/Exts/ParseUtils.hs:90:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[19 of 24] Compiling Language.Haskell.Exts.Annotated.Fixity ( src/Language/Haskell/Exts/Annotated/Fixity.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Fixity.o )
+[20 of 24] Compiling Language.Haskell.Exts.InternalParser ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/InternalParser.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/InternalParser.o )
+[21 of 24] Compiling Language.Haskell.Exts.Annotated.Parser ( src/Language/Haskell/Exts/Annotated/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated/Parser.o )
+[22 of 24] Compiling Language.Haskell.Exts.Parser ( src/Language/Haskell/Exts/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Parser.o )
+[23 of 24] Compiling Language.Haskell.Exts.Annotated ( src/Language/Haskell/Exts/Annotated.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts/Annotated.o )
+[24 of 24] Compiling Language.Haskell.Exts ( src/Language/Haskell/Exts.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Exts.o )
+In-place registering haskell-src-exts-1.17.1...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/haskell-src-exts-1.17.1-H93MMbJhKVFGAbQVBjXT5u
+Registering haskell-src-exts-1.17.1...

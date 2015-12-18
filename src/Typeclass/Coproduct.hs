@@ -20,7 +20,7 @@ data (+) f g a where
 infixr 5 +
 
 instance (Functor f, Functor g) => Functor (f + g) where
-    fmap f (Inl s) = Inl (fmap f s) 
+    fmap f (Inl s) = Inl (fmap f s)
     fmap f (Inr s) = Inr (fmap f s)
 
 -- | The junction operator
@@ -55,12 +55,7 @@ instance {-# OVERLAPPING #-} (Functor f, g :< sig) => g :< (f + sig) where
 inject :: (TermAlgebra h f, sub :< f) => sub (h a) -> h a
 inject = con . inj
 
--- TODO
+-- NOTE Is this needed?
 --project :: (sub :< sup) => Free sup a -> Maybe (sub (Free sup a))
 --project (Con s) = prj s
 --project _ = Nothing
-
-
-
-
-

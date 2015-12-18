@@ -1,0 +1,265 @@
+Configuring polyparse-1.11...
+Building polyparse-1.11...
+Preprocessing library polyparse-1.11...
+[ 1 of 18] Compiling Text.ParserCombinators.Poly.Result ( src/Text/ParserCombinators/Poly/Result.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Result.o )
+
+src/Text/ParserCombinators/Poly/Result.hs:3:15: Warning:
+    Tab character
+[ 2 of 18] Compiling Text.ParserCombinators.Poly.Base ( src/Text/ParserCombinators/Poly/Base.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Base.o )
+
+src/Text/ParserCombinators/Poly/Base.hs:3:19: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:4:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:8:10: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:9:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:11:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:13:11: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:15:10: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:17:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:18:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:19:10: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:20:10: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:21:11: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:22:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Base.hs:23:12: Warning:
+    Tab character
+[ 3 of 18] Compiling Text.ParserCombinators.Poly.Parser ( src/Text/ParserCombinators/Poly/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Parser.o )
+
+src/Text/ParserCombinators/Poly/Parser.hs:7:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:8:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:10:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:11:8: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:12:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:13:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:17:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Parser.hs:79:18: Warning:
+    Tab character
+[ 4 of 18] Compiling Text.ParserCombinators.Poly.Lazy ( src/Text/ParserCombinators/Poly/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Lazy.o )
+
+src/Text/ParserCombinators/Poly/Lazy.hs:4:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:5:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:6:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:8:9: Warning: Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:9:8: Warning: Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:10:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:11:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Lazy.hs:15:12: Warning:
+    Tab character
+[ 5 of 18] Compiling Text.ParserCombinators.Poly.StateParser ( src/Text/ParserCombinators/Poly/StateParser.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/StateParser.o )
+
+src/Text/ParserCombinators/Poly/StateParser.hs:7:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:8:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:10:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:11:8: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:12:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:19:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateParser.hs:82:18: Warning:
+    Tab character
+[ 6 of 18] Compiling Text.ParserCombinators.Poly.State ( src/Text/ParserCombinators/Poly/State.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/State.o )
+
+src/Text/ParserCombinators/Poly/State.hs:3:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:4:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:5:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:7:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:8:8: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:9:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:10:11: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/State.hs:16:12: Warning:
+    Tab character
+[ 7 of 18] Compiling Text.ParserCombinators.Poly.StateLazy ( src/Text/ParserCombinators/Poly/StateLazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/StateLazy.o )
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:4:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:5:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:6:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:8:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:9:8: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:10:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:12:16: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/StateLazy.hs:18:12: Warning:
+    Tab character
+[ 8 of 18] Compiling Text.ParserCombinators.Poly.Lex ( src/Text/ParserCombinators/Poly/Lex.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Lex.o )
+
+src/Text/ParserCombinators/Poly/Lex.hs:89:18: Warning:
+    Tab character
+[ 9 of 18] Compiling Text.ParserCombinators.Poly.ByteString ( src/Text/ParserCombinators/Poly/ByteString.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/ByteString.o )
+[10 of 18] Compiling Text.ParserCombinators.Poly.ByteStringChar ( src/Text/ParserCombinators/Poly/ByteStringChar.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/ByteStringChar.o )
+[11 of 18] Compiling Text.Parse.ByteString ( src/Text/Parse/ByteString.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/Parse/ByteString.o )
+
+src/Text/Parse/ByteString.hs:5:15: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:6:14: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:7:1: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:8:16: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:12:9: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:13:11: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:14:12: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:15:19: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:16:11: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:17:10: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:74:32: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:419:31: Warning: Tab character
+
+src/Text/Parse/ByteString.hs:429:1: Warning: Tab character
+[12 of 18] Compiling Text.ParserCombinators.Poly.Text ( src/Text/ParserCombinators/Poly/Text.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Text.o )
+[13 of 18] Compiling Text.ParserCombinators.Poly.StateText ( src/Text/ParserCombinators/Poly/StateText.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/StateText.o )
+[14 of 18] Compiling Text.ParserCombinators.Poly.Plain ( src/Text/ParserCombinators/Poly/Plain.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly/Plain.o )
+
+src/Text/ParserCombinators/Poly/Plain.hs:3:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:4:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:5:14: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:7:9: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:8:8: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:9:12: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:10:15: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:11:11: Warning:
+    Tab character
+
+src/Text/ParserCombinators/Poly/Plain.hs:14:12: Warning:
+    Tab character
+[15 of 18] Compiling Text.ParserCombinators.Poly ( src/Text/ParserCombinators/Poly.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/Poly.o )
+[16 of 18] Compiling Text.Parse       ( src/Text/Parse.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/Parse.o )
+
+src/Text/Parse.hs:4:15: Warning: Tab character
+
+src/Text/Parse.hs:5:14: Warning: Tab character
+
+src/Text/Parse.hs:6:1: Warning: Tab character
+
+src/Text/Parse.hs:7:16: Warning: Tab character
+
+src/Text/Parse.hs:11:9: Warning: Tab character
+
+src/Text/Parse.hs:12:11: Warning: Tab character
+
+src/Text/Parse.hs:13:12: Warning: Tab character
+
+src/Text/Parse.hs:14:19: Warning: Tab character
+
+src/Text/Parse.hs:15:11: Warning: Tab character
+
+src/Text/Parse.hs:16:10: Warning: Tab character
+
+src/Text/Parse.hs:67:32: Warning: Tab character
+
+src/Text/Parse.hs:389:1: Warning: Tab character
+[17 of 18] Compiling Text.ParserCombinators.HuttonMeijerWallace ( src/Text/ParserCombinators/HuttonMeijerWallace.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/HuttonMeijerWallace.o )
+[18 of 18] Compiling Text.ParserCombinators.HuttonMeijer ( src/Text/ParserCombinators/HuttonMeijer.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Text/ParserCombinators/HuttonMeijer.o )
+In-place registering polyparse-1.11...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/polyparse-1.11-Gxw74NB1JmxLlgdLgjVBXQ
+Registering polyparse-1.11...

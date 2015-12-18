@@ -1,0 +1,22 @@
+Configuring extra-1.4.2...
+Building extra-1.4.2...
+Preprocessing library extra-1.4.2...
+[ 1 of 15] Compiling System.Info.Extra ( src/System/Info/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/Info/Extra.o )
+[ 2 of 15] Compiling System.Environment.Extra ( src/System/Environment/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/Environment/Extra.o )
+[ 3 of 15] Compiling Numeric.Extra    ( src/Numeric/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Numeric/Extra.o )
+[ 4 of 15] Compiling Data.Tuple.Extra ( src/Data/Tuple/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Tuple/Extra.o )
+[ 5 of 15] Compiling Data.List.Extra  ( src/Data/List/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/List/Extra.o )
+[ 6 of 15] Compiling Data.IORef.Extra ( src/Data/IORef/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/IORef/Extra.o )
+[ 7 of 15] Compiling Data.Either.Extra ( src/Data/Either/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Either/Extra.o )
+[ 8 of 15] Compiling Control.Monad.Extra ( src/Control/Monad/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Monad/Extra.o )
+[ 9 of 15] Compiling System.Directory.Extra ( src/System/Directory/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/Directory/Extra.o )
+[10 of 15] Compiling Control.Exception.Extra ( src/Control/Exception/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Exception/Extra.o )
+[11 of 15] Compiling System.Time.Extra ( src/System/Time/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/Time/Extra.o )
+[12 of 15] Compiling Control.Concurrent.Extra ( src/Control/Concurrent/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Concurrent/Extra.o )
+[13 of 15] Compiling System.IO.Extra  ( src/System/IO/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/IO/Extra.o )
+[14 of 15] Compiling System.Process.Extra ( src/System/Process/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/System/Process/Extra.o )
+[15 of 15] Compiling Extra            ( src/Extra.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Extra.o )
+In-place registering extra-1.4.2...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/extra-1.4.2-JuhBsWeylpV3QDHZA0P99B
+Registering extra-1.4.2...

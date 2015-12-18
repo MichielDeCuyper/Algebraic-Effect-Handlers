@@ -1,0 +1,17 @@
+Configuring fclabels-2.0.2.3...
+Building fclabels-2.0.2.3...
+Preprocessing library fclabels-2.0.2.3...
+[ 1 of 10] Compiling Data.Label.Point ( src/Data/Label/Point.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Point.o )
+[ 2 of 10] Compiling Data.Label.Poly  ( src/Data/Label/Poly.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Poly.o )
+[ 3 of 10] Compiling Data.Label.Mono  ( src/Data/Label/Mono.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Mono.o )
+[ 4 of 10] Compiling Data.Label.Derive ( src/Data/Label/Derive.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Derive.o )
+[ 5 of 10] Compiling Data.Label.Partial ( src/Data/Label/Partial.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Partial.o )
+[ 6 of 10] Compiling Data.Label.Failing ( src/Data/Label/Failing.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Failing.o )
+[ 7 of 10] Compiling Data.Label.Total ( src/Data/Label/Total.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Total.o )
+[ 8 of 10] Compiling Data.Label.Monadic ( src/Data/Label/Monadic.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Monadic.o )
+[ 9 of 10] Compiling Data.Label       ( src/Data/Label.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label.o )
+[10 of 10] Compiling Data.Label.Base  ( src/Data/Label/Base.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Label/Base.o )
+In-place registering fclabels-2.0.2.3...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/fclabels-2.0.2.3-En3DpCUXFtiInaiYcMW2fp
+Registering fclabels-2.0.2.3...

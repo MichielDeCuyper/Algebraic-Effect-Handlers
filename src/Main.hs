@@ -4,11 +4,11 @@ module Main where
 
 -- Datatypes
 -- Effects
-import Effect.State
 import Effect.Writer
 --import Effect.Reader
 --import Effect.RWS
---import Effect.State
+import Effect.State
+import Effect.LogState
 import Effect.Void
 --import Effect.Writer
 -- Typeclasses
@@ -18,17 +18,22 @@ import Typeclass.TermMonad
 main :: IO ()
 main = putStrLn "Hello"
 
-example :: TermMonad h (State Int + Writer String + Void) => Int -> h Int
+example :: TermMonad h (State Int + Void) => Int -> h Int
 example n
   | n <= 0 = get
   | otherwise =
       do a <- get
          put (a + n)
-         tell ("put")
          example (n - 1)
 
---main :: IO ()
---main = print $ show f
+a :: (String, Int)
+a = run . runWriter $ runLogState (example 1) 3
+
+b :: Int
+b = run $ runState (example 1) 3
+
+-- main :: IO ()
+-- main = print $ show f
 --    where f = run $ runState count 100000000
 
 --ex :: TermAlgebra h (Error String + Void) => Int -> h Int

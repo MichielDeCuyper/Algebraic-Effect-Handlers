@@ -1,0 +1,31 @@
+[1 of 1] Compiling Main             ( /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/cabal-helper-0.6.2.0/Setup.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/cabal-helper-0.6.2.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/Main.o )
+Linking /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/cabal-helper-0.6.2.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/setup ...
+Configuring cabal-helper-0.6.2.0...
+Building cabal-helper-0.6.2.0...
+Preprocessing library cabal-helper-0.6.2.0...
+[1 of 4] Compiling CabalHelper.Sandbox ( CabalHelper/Sandbox.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/CabalHelper/Sandbox.o )
+[2 of 4] Compiling CabalHelper.Types ( CabalHelper/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/CabalHelper/Types.o )
+[3 of 4] Compiling Paths_cabal_helper ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_cabal_helper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Paths_cabal_helper.o )
+[4 of 4] Compiling Distribution.Helper ( Distribution/Helper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Distribution/Helper.o )
+In-place registering cabal-helper-0.6.2.0...
+Preprocessing executable 'cabal-helper-wrapper' for cabal-helper-0.6.2.0...
+[1 of 9] Compiling CabalHelper.Data ( CabalHelper/Data.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Data.o )
+[2 of 9] Compiling CabalHelper.Sandbox ( CabalHelper/Sandbox.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Sandbox.o )
+[3 of 9] Compiling CabalHelper.Types ( CabalHelper/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Types.o )
+[4 of 9] Compiling CabalHelper.Log  ( CabalHelper/Log.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Log.o )
+[5 of 9] Compiling CabalHelper.GuessGhc ( CabalHelper/GuessGhc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/GuessGhc.o )
+[6 of 9] Compiling CabalHelper.Common ( CabalHelper/Common.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Common.o )
+[7 of 9] Compiling Paths_cabal_helper ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_cabal_helper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/Paths_cabal_helper.o )
+[8 of 9] Compiling CabalHelper.Compile ( CabalHelper/Compile.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Compile.o )
+[9 of 9] Compiling Main             ( CabalHelper/Wrapper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/Main.o )
+[7 of 9] Compiling CabalHelper.Data ( CabalHelper/Data.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper-tmp/CabalHelper/Data.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/cabal-helper-wrapper/cabal-helper-wrapper ...
+extended "cabal-helper-wrapper"
+Installing executable(s) in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/libexec
+Warning: The directory
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/libexec
+is not in the system search path.
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/cabal-helper-0.6.2.0-88i62kMsTZAEWTCEAloKp6
+Registering cabal-helper-0.6.2.0...

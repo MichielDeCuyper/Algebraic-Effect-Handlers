@@ -60,3 +60,5 @@ algError (Throw e) = var (Left e)
 
 runError :: TermMonad m f => Codensity (ErrorCarrier e m) a -> m (Either e a)
 runError = unEC . runCod var
+
+-- TODO Write catch handler

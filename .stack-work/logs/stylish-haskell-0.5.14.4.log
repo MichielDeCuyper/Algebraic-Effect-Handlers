@@ -1,0 +1,62 @@
+Configuring stylish-haskell-0.5.14.4...
+Building stylish-haskell-0.5.14.4...
+Preprocessing library stylish-haskell-0.5.14.4...
+[ 1 of 15] Compiling Language.Haskell.Stylish.Block ( src/Language/Haskell/Stylish/Block.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Block.o )
+[ 2 of 15] Compiling Language.Haskell.Stylish.Editor ( src/Language/Haskell/Stylish/Editor.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Editor.o )
+[ 3 of 15] Compiling Paths_stylish_haskell ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_stylish_haskell.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Paths_stylish_haskell.o )
+[ 4 of 15] Compiling Language.Haskell.Stylish.Step ( src/Language/Haskell/Stylish/Step.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step.o )
+[ 5 of 15] Compiling Language.Haskell.Stylish.Step.Tabs ( src/Language/Haskell/Stylish/Step/Tabs.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/Tabs.o )
+[ 6 of 15] Compiling Language.Haskell.Stylish.Step.TrailingWhitespace ( src/Language/Haskell/Stylish/Step/TrailingWhitespace.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/TrailingWhitespace.o )
+[ 7 of 15] Compiling Language.Haskell.Stylish.Util ( src/Language/Haskell/Stylish/Util.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Util.o )
+[ 8 of 15] Compiling Language.Haskell.Stylish.Step.Imports ( src/Language/Haskell/Stylish/Step/Imports.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/Imports.o )
+[ 9 of 15] Compiling Language.Haskell.Stylish.Step.LanguagePragmas ( src/Language/Haskell/Stylish/Step/LanguagePragmas.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/LanguagePragmas.o )
+[10 of 15] Compiling Language.Haskell.Stylish.Step.Records ( src/Language/Haskell/Stylish/Step/Records.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/Records.o )
+[11 of 15] Compiling Language.Haskell.Stylish.Step.UnicodeSyntax ( src/Language/Haskell/Stylish/Step/UnicodeSyntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Step/UnicodeSyntax.o )
+[12 of 15] Compiling Language.Haskell.Stylish.Verbose ( src/Language/Haskell/Stylish/Verbose.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Verbose.o )
+[13 of 15] Compiling Language.Haskell.Stylish.Config ( src/Language/Haskell/Stylish/Config.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Config.o )
+
+src/Language/Haskell/Stylish/Config.hs:13:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[14 of 15] Compiling Language.Haskell.Stylish.Parse ( src/Language/Haskell/Stylish/Parse.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish/Parse.o )
+[15 of 15] Compiling Language.Haskell.Stylish ( src/Language/Haskell/Stylish.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Stylish.o )
+
+src/Language/Haskell/Stylish.hs:28:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+In-place registering stylish-haskell-0.5.14.4...
+Preprocessing executable 'stylish-haskell' for stylish-haskell-0.5.14.4...
+[ 1 of 16] Compiling Paths_stylish_haskell ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_stylish_haskell.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Paths_stylish_haskell.o )
+[ 2 of 16] Compiling Language.Haskell.Stylish.Verbose ( src/Language/Haskell/Stylish/Verbose.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Verbose.o )
+[ 3 of 16] Compiling Language.Haskell.Stylish.Step ( src/Language/Haskell/Stylish/Step.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step.o )
+[ 4 of 16] Compiling Language.Haskell.Stylish.Step.Tabs ( src/Language/Haskell/Stylish/Step/Tabs.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/Tabs.o )
+[ 5 of 16] Compiling Language.Haskell.Stylish.Step.TrailingWhitespace ( src/Language/Haskell/Stylish/Step/TrailingWhitespace.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/TrailingWhitespace.o )
+[ 6 of 16] Compiling Language.Haskell.Stylish.Util ( src/Language/Haskell/Stylish/Util.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Util.o )
+[ 7 of 16] Compiling Language.Haskell.Stylish.Block ( src/Language/Haskell/Stylish/Block.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Block.o )
+[ 8 of 16] Compiling Language.Haskell.Stylish.Editor ( src/Language/Haskell/Stylish/Editor.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Editor.o )
+[ 9 of 16] Compiling Language.Haskell.Stylish.Step.Records ( src/Language/Haskell/Stylish/Step/Records.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/Records.o )
+[10 of 16] Compiling Language.Haskell.Stylish.Step.Imports ( src/Language/Haskell/Stylish/Step/Imports.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/Imports.o )
+[11 of 16] Compiling Language.Haskell.Stylish.Step.LanguagePragmas ( src/Language/Haskell/Stylish/Step/LanguagePragmas.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/LanguagePragmas.o )
+[12 of 16] Compiling Language.Haskell.Stylish.Step.UnicodeSyntax ( src/Language/Haskell/Stylish/Step/UnicodeSyntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Step/UnicodeSyntax.o )
+[13 of 16] Compiling Language.Haskell.Stylish.Config ( src/Language/Haskell/Stylish/Config.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Config.o )
+
+src/Language/Haskell/Stylish/Config.hs:13:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[14 of 16] Compiling Language.Haskell.Stylish.Parse ( src/Language/Haskell/Stylish/Parse.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish/Parse.o )
+[15 of 16] Compiling Language.Haskell.Stylish ( src/Language/Haskell/Stylish.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Language/Haskell/Stylish.o )
+
+src/Language/Haskell/Stylish.hs:28:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[16 of 16] Compiling Main             ( src/Main.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/stylish-haskell/stylish-haskell ...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/stylish-haskell-0.5.14.4-IqFBJRZg15b0zwS1M9skj2
+Installing executable(s) in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/bin
+Registering stylish-haskell-0.5.14.4...

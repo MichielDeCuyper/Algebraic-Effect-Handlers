@@ -54,7 +54,7 @@ conRWS :: TermMonad m f => f (r -> s -> m (w, a)) -> r -> s -> m (w, a)
 conRWS op r s = con (fmap (\m -> m r s) op)
 
 genRWS :: (Monoid w, TermMonad m f) => a -> (r -> s -> m (w, a))
-genRWS a = (\_ _ -> return (mempty, a))
+genRWS a = \_ _ -> return (mempty, a)
 
 algRWS :: (Monoid w, TermMonad m f) => RWS r w s (r -> s -> m (w, a)) -> (r -> s -> m (w, a))
 algRWS (Ask g) r s = g r r s

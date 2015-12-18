@@ -1,0 +1,71 @@
+[1 of 5] Compiling NotCPP.Utils     ( NotCPP/Utils.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/NotCPP/Utils.o )
+[2 of 5] Compiling NotCPP.LookupValueName ( NotCPP/LookupValueName.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/NotCPP/LookupValueName.o )
+[3 of 5] Compiling NotCPP.Declarations ( NotCPP/Declarations.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/NotCPP/Declarations.o )
+[4 of 5] Compiling SetupCompat      ( SetupCompat.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/SetupCompat.o )
+[5 of 5] Compiling Main             ( /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/Setup.hs, /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/Main.o )
+Linking /private/var/folders/x0/b5l_7ygs7zv2b35c5_q1pd7w0000gp/T/stack10746/ghc-mod-5.4.0.0/.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/setup/setup ...
+Configuring ghc-mod-5.4.0.0...
+Building ghc-mod-5.4.0.0...
+Preprocessing library ghc-mod-5.4.0.0...
+[ 1 of 46] Compiling Language.Haskell.GhcMod.Read ( Language/Haskell/GhcMod/Read.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Read.o )
+[ 2 of 46] Compiling Paths_ghc_mod    ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_ghc_mod.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Paths_ghc_mod.o )
+[ 3 of 46] Compiling Utils            ( Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Utils.o )
+[ 4 of 46] Compiling Language.Haskell.GhcMod.Caching.Types ( Language/Haskell/GhcMod/Caching/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Caching/Types.o )
+[ 5 of 46] Compiling Language.Haskell.GhcMod.Types ( Language/Haskell/GhcMod/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Types.o )
+[ 6 of 46] Compiling Language.Haskell.GhcMod.Gap ( Language/Haskell/GhcMod/Gap.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Gap.o )
+[ 7 of 46] Compiling Language.Haskell.GhcMod.Doc ( Language/Haskell/GhcMod/Doc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Doc.o )
+[ 8 of 46] Compiling Language.Haskell.GhcMod.SrcUtils ( Language/Haskell/GhcMod/SrcUtils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/SrcUtils.o )
+[ 9 of 46] Compiling Language.Haskell.GhcMod.Monad.Types ( Language/Haskell/GhcMod/Monad/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Monad/Types.o )
+[10 of 46] Compiling Language.Haskell.GhcMod.Output ( Language/Haskell/GhcMod/Output.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Output.o )
+[11 of 46] Compiling Language.Haskell.GhcMod.Convert ( Language/Haskell/GhcMod/Convert.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Convert.o )
+[12 of 46] Compiling Language.Haskell.GhcMod.Pretty ( Language/Haskell/GhcMod/Pretty.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Pretty.o )
+[13 of 46] Compiling Language.Haskell.GhcMod.Error ( Language/Haskell/GhcMod/Error.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Error.o )
+[14 of 46] Compiling Language.Haskell.GhcMod.Utils ( Language/Haskell/GhcMod/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Utils.o )
+[15 of 46] Compiling Language.Haskell.GhcMod.Stack ( Language/Haskell/GhcMod/Stack.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Stack.o )
+[16 of 46] Compiling Language.Haskell.GhcMod.DebugLogger ( Language/Haskell/GhcMod/DebugLogger.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/DebugLogger.o )
+[17 of 46] Compiling Language.Haskell.GhcMod.DynFlags ( Language/Haskell/GhcMod/DynFlags.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/DynFlags.o )
+[18 of 46] Compiling Language.Haskell.GhcMod.Logger ( Language/Haskell/GhcMod/Logger.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Logger.o )
+[19 of 46] Compiling Language.Haskell.GhcMod.LightGhc ( Language/Haskell/GhcMod/LightGhc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/LightGhc.o )
+[20 of 46] Compiling Language.Haskell.GhcMod.Logging ( Language/Haskell/GhcMod/Logging.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Logging.o )
+[21 of 46] Compiling Language.Haskell.GhcMod.Caching ( Language/Haskell/GhcMod/Caching.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Caching.o )
+[22 of 46] Compiling Language.Haskell.GhcMod.PathsAndFiles ( Language/Haskell/GhcMod/PathsAndFiles.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/PathsAndFiles.o )
+[23 of 46] Compiling Language.Haskell.GhcMod.CustomPackageDb ( Language/Haskell/GhcMod/CustomPackageDb.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/CustomPackageDb.o )
+[24 of 46] Compiling Language.Haskell.GhcMod.CabalHelper ( Language/Haskell/GhcMod/CabalHelper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/CabalHelper.o )
+[25 of 46] Compiling Language.Haskell.GhcMod.GhcPkg ( Language/Haskell/GhcMod/GhcPkg.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/GhcPkg.o )
+[26 of 46] Compiling Language.Haskell.GhcMod.World ( Language/Haskell/GhcMod/World.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/World.o )
+[27 of 46] Compiling Language.Haskell.GhcMod.HomeModuleGraph ( Language/Haskell/GhcMod/HomeModuleGraph.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/HomeModuleGraph.o )
+[28 of 46] Compiling Language.Haskell.GhcMod.FileMapping ( Language/Haskell/GhcMod/FileMapping.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/FileMapping.o )
+[29 of 46] Compiling Language.Haskell.GhcMod.Target ( Language/Haskell/GhcMod/Target.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Target.o )
+[30 of 46] Compiling Language.Haskell.GhcMod.Cradle ( Language/Haskell/GhcMod/Cradle.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Cradle.o )
+[31 of 46] Compiling Language.Haskell.GhcMod.Monad ( Language/Haskell/GhcMod/Monad.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Monad.o )
+[32 of 46] Compiling Language.Haskell.GhcMod.FillSig ( Language/Haskell/GhcMod/FillSig.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/FillSig.o )
+[33 of 46] Compiling Language.Haskell.GhcMod.Find ( Language/Haskell/GhcMod/Find.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Find.o )
+[34 of 46] Compiling Language.Haskell.GhcMod.Flag ( Language/Haskell/GhcMod/Flag.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Flag.o )
+[35 of 46] Compiling Language.Haskell.GhcMod.Info ( Language/Haskell/GhcMod/Info.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Info.o )
+[36 of 46] Compiling Language.Haskell.GhcMod.Lang ( Language/Haskell/GhcMod/Lang.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Lang.o )
+[37 of 46] Compiling Language.Haskell.GhcMod.Lint ( Language/Haskell/GhcMod/Lint.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Lint.o )
+[38 of 46] Compiling Language.Haskell.GhcMod.Modules ( Language/Haskell/GhcMod/Modules.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Modules.o )
+[39 of 46] Compiling Language.Haskell.GhcMod.PkgDoc ( Language/Haskell/GhcMod/PkgDoc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/PkgDoc.o )
+[40 of 46] Compiling Language.Haskell.GhcMod.Internal ( Language/Haskell/GhcMod/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Internal.o )
+[41 of 46] Compiling Language.Haskell.GhcMod.Debug ( Language/Haskell/GhcMod/Debug.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Debug.o )
+[42 of 46] Compiling Language.Haskell.GhcMod.Check ( Language/Haskell/GhcMod/Check.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Check.o )
+[43 of 46] Compiling Language.Haskell.GhcMod.CaseSplit ( Language/Haskell/GhcMod/CaseSplit.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/CaseSplit.o )
+[44 of 46] Compiling Language.Haskell.GhcMod.Browse ( Language/Haskell/GhcMod/Browse.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Browse.o )
+[45 of 46] Compiling Language.Haskell.GhcMod.Boot ( Language/Haskell/GhcMod/Boot.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod/Boot.o )
+[46 of 46] Compiling Language.Haskell.GhcMod ( Language/Haskell/GhcMod.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/GhcMod.o )
+In-place registering ghc-mod-5.4.0.0...
+Preprocessing executable 'ghc-mod' for ghc-mod-5.4.0.0...
+[1 of 3] Compiling Misc             ( src/Misc.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-mod/ghc-mod-tmp/Misc.o )
+[2 of 3] Compiling Paths_ghc_mod    ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_ghc_mod.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-mod/ghc-mod-tmp/Paths_ghc_mod.o )
+[3 of 3] Compiling Main             ( src/GHCMod.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-mod/ghc-mod-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-mod/ghc-mod ...
+Preprocessing executable 'ghc-modi' for ghc-mod-5.4.0.0...
+[1 of 3] Compiling Utils            ( Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-modi/ghc-modi-tmp/Utils.o )
+[2 of 3] Compiling Paths_ghc_mod    ( .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen/Paths_ghc_mod.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-modi/ghc-modi-tmp/Paths_ghc_mod.o )
+[3 of 3] Compiling Main             ( src/GHCModi.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-modi/ghc-modi-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ghc-modi/ghc-modi ...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/ghc-mod-5.4.0.0-8WpendtCKeZKczrziECCTZ
+Installing executable(s) in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/bin
+Registering ghc-mod-5.4.0.0...

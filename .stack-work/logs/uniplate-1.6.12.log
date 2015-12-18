@@ -1,0 +1,28 @@
+Configuring uniplate-1.6.12...
+Building uniplate-1.6.12...
+Preprocessing library uniplate-1.6.12...
+[ 1 of 21] Compiling Data.Generics.Uniplate.Data.Instances ( Data/Generics/Uniplate/Data/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Data/Instances.o )
+[ 2 of 21] Compiling Data.Generics.Uniplate.Internal.Utils ( Data/Generics/Uniplate/Internal/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Internal/Utils.o )
+[ 3 of 21] Compiling Data.Generics.Uniplate ( Data/Generics/Uniplate.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate.o )
+[ 4 of 21] Compiling Data.Generics.UniplateOn ( Data/Generics/UniplateOn.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/UniplateOn.o )
+[ 5 of 21] Compiling Data.Generics.Str ( Data/Generics/Str.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Str.o )
+[ 6 of 21] Compiling Data.Generics.Uniplate.Operations ( Data/Generics/Uniplate/Operations.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Operations.o )
+[ 7 of 21] Compiling Data.Generics.Compos ( Data/Generics/Compos.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Compos.o )
+[ 8 of 21] Compiling Data.Generics.SYB ( Data/Generics/SYB.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/SYB.o )
+[ 9 of 21] Compiling Data.Generics.Uniplate.Internal.Data ( Data/Generics/Uniplate/Internal/Data.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Internal/Data.o )
+[10 of 21] Compiling Data.Generics.Uniplate.Data ( Data/Generics/Uniplate/Data.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Data.o )
+[11 of 21] Compiling Data.Generics.Uniplate.Internal.DataOnlyOperations ( Data/Generics/Uniplate/Internal/DataOnlyOperations.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Internal/DataOnlyOperations.o )
+[12 of 21] Compiling Data.Generics.Uniplate.DataOnly ( Data/Generics/Uniplate/DataOnly.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/DataOnly.o )
+[13 of 21] Compiling Data.Generics.Uniplate.Direct ( Data/Generics/Uniplate/Direct.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Direct.o )
+[14 of 21] Compiling Data.Generics.Uniplate.Typeable ( Data/Generics/Uniplate/Typeable.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Typeable.o )
+[15 of 21] Compiling Data.Generics.Uniplate.Zipper ( Data/Generics/Uniplate/Zipper.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Uniplate/Zipper.o )
+[16 of 21] Compiling Data.Generics.UniplateStr ( Data/Generics/UniplateStr.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/UniplateStr.o )
+[17 of 21] Compiling Data.Generics.UniplateStrOn ( Data/Generics/UniplateStrOn.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/UniplateStrOn.o )
+[18 of 21] Compiling Data.Generics.Biplate ( Data/Generics/Biplate.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/Biplate.o )
+[19 of 21] Compiling Data.Generics.PlateDirect ( Data/Generics/PlateDirect.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/PlateDirect.o )
+[20 of 21] Compiling Data.Generics.PlateTypeable ( Data/Generics/PlateTypeable.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/PlateTypeable.o )
+[21 of 21] Compiling Data.Generics.PlateData ( Data/Generics/PlateData.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Generics/PlateData.o )
+In-place registering uniplate-1.6.12...
+Installing library in
+/Users/MichielDeCuyper/.stack/snapshots/x86_64-osx/nightly-2015-12-16/7.10.3/lib/x86_64-osx-ghc-7.10.3/uniplate-1.6.12-EZjys41ixkeAhVeRNVvM9y
+Registering uniplate-1.6.12...
