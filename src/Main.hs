@@ -1,19 +1,22 @@
-{-#LANGUAGE FlexibleContexts, TypeOperators, AllowAmbiguousTypes#-}
+{-# LANGUAGE AllowAmbiguousTypes #-}
+{-# LANGUAGE FlexibleContexts    #-}
+{-# LANGUAGE TypeOperators       #-}
 
 module Main where
 
 -- Datatypes
 -- Effects
-import Effect.Writer
---import Effect.Reader
+import           Effect.Writer
+import Effect.Reader
 --import Effect.RWS
-import Effect.State
-import Effect.LogState
-import Effect.Void
+import           Effect.LogState
+import           Effect.State
+import           Effect.Void
+import Effect.Error
 --import Effect.Writer
 -- Typeclasses
-import Typeclass.Coproduct
-import Typeclass.TermMonad
+import           Typeclass.Coproduct
+import           Typeclass.TermMonad
 
 main :: IO ()
 main = putStrLn "Hello"
@@ -30,7 +33,7 @@ a :: (String, Int)
 a = run . runWriter $ runLogState (example 1) 3
 
 b :: Int
-b = run $ runState (example 1) 3
+b = run $ runState (example 1) 4
 
 -- main :: IO ()
 -- main = print $ show f
@@ -63,10 +66,10 @@ b = run $ runState (example 1) 3
 --           else do put (i - 1)
 --                   count
 
---greeter :: TermMonad m (Reader String + Void) => m String
---greeter = do name <- ask
---             return ("Hello " ++ name)
+greeter :: TermMonad m (Reader String + Void) => m String
+greeter = do name <- ask
+             return ("Hello " ++ name)
 
 
---catch :: (TermMonad h f, Error e :< f) => h a -> (e -> h a) -> h a
---catch = undefined
+fault :: TermMonad m (Error String + Void) => m a
+fault = throw "Derp"

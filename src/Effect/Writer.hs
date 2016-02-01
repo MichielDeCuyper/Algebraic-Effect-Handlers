@@ -32,7 +32,7 @@ import Typeclass.TermMonad
 import Typeclass.TermAlgebra
 
 -- | The Writer datatype.
--- 
+--
 data Writer w k where
     Tell :: w -> k -> Writer w k
 
@@ -40,11 +40,11 @@ data Writer w k where
 -- Use this one instead of the Tell-constructor of the datatype!
 --
 -- Constructs a 'Tell' operation given a monoidical value __w__ and a continuation __k__
--- 
+--
 -- Usage: @tell w k@
 --
 -- = Example
--- 
+--
 -- @let x = tell "abc" (var 123) :: TermAlgebra h (Writer String + Void) => h Int@
 --
 --  >>> run . runWriter $ x
@@ -54,16 +54,16 @@ data Writer w k where
 --
 -- >>> run . runWriter $ y
 -- ("xyzabc", 123)
-tell :: (TermAlgebra h f, Writer w :< f) => w -> h ()
+tell :: (TermMonad m f, Writer w :< f) => w -> m ()
 tell w = inject (Tell w (var ()))
 
 instance Functor (Writer w) where
-    fmap f (Tell w k) = Tell w (f k) 
+    fmap f (Tell w k) = Tell w (f k)
 
 newtype WriterCarrier m w a = WC {unWC :: m (w, a)}
 
 instance Functor m => Functor (WriterCarrier m w) where
-    fmap f x = WC (fmap (fmap f) (unWC x)) 
+    fmap f x = WC (fmap (fmap f) (unWC x))
 
 instance (Monoid w, TermMonad m f) => TermAlgebra (WriterCarrier m w) (Writer w + f) where
     con = WC . (algWriter \/ con) . fmap unWC
@@ -88,4 +88,3 @@ algWriter (Tell w k) = k >>= (\(w', x) -> return (w `mappend` w', x))
 ---- First handles Nondet, then Writer
 --ex2 :: TermAlgebra h (Nondet + (Writer String + Void)) => h Bool
 --ex2 = tell "abc" coin
-

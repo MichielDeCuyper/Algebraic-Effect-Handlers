@@ -1,41 +1,29 @@
 {-#LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleInstances, FlexibleContexts, UndecidableInstances, IncoherentInstances#-}
 
-module Effect.Reader where
-
+import Data.Char
 import Data.Codensity
-import Typeclass.Coproduct
-import Typeclass.TermMonad
 import Typeclass.TermAlgebra
+import Typeclass.TermMonad
+import Typeclass.Coproduct
 
-data Reader e k where
-    Ask :: (e -> k) -> Reader e k
+data Free f a where
+  Var :: a -> Free f a
+  Con  :: f (Free f a) -> Free f a
 
-ask :: (TermMonad m f, Reader e :< f) => m e
-ask = inject (Ask var)
+data Reader e a where
+  Ask :: (e -> a) -> Reader e a
 
 instance Functor (Reader e) where
-    fmap f (Ask g) = Ask (f . g)
+  fmap f (Ask g) = Ask (f . g)
 
-newtype ReaderCarrier m e a = RC {unRC :: e -> m a}
+main :: IO ()
+main = putStr "Hello world"
 
-instance Functor m => Functor (ReaderCarrier m e) where
-    fmap f x = RC (fmap (fmap f) (unRC x))
+ex = Con (Ask (\e -> Var("Hello " ++ e)))
 
-instance TermMonad m f => TermAlgebra (ReaderCarrier m e) (Reader e + f) where
-    var = RC . genReader
-    con = RC . (algReader \/ conReader) . fmap unRC
-
-genReader :: TermMonad m f => a -> e -> m a
-genReader x = const (var x)
-
-algReader :: TermMonad m f => Reader e (e -> m a) -> e -> m a
-algReader (Ask g) e = g e e
-
-runReader :: TermMonad m f => Codensity (ReaderCarrier m e) a -> e -> m a
-runReader = unRC . runCod var
-
-conReader :: (Functor f, TermAlgebra m f) => f (e -> m a) -> e -> m a
-conReader op s = con (fmap (\m -> m s) op)
+local' :: (e -> e) -> Free (Reader e) a -> Free (Reader e) a
+local' f (Var x) = Var x
+local' f (Con (Ask k)) = Con (Ask (local' f . k . f))
 
 newtype LocalCarrier m e a = LoC {unLoC :: (e -> e) -> m a}
 
@@ -50,7 +38,7 @@ genLocal :: TermMonad m f => a -> (e -> e) -> m a
 genLocal x = const (return x)
 
 algLocal :: (Functor f, TermMonad m (Reader e + f)) => Reader e ((e -> e) -> m a) -> (e -> e) -> m a
-algLocal (Ask k) g = con(Inl(Ask(\e -> k (g e) g)))
+algLocal (Ask k) g = con(Inl(Ask(\e -> k e g)))
 
 conLocal :: (Functor f, Functor g, TermAlgebra m (g + f)) => f ((e -> e) -> m a) -> (e -> e) -> m a
 conLocal a e = con (Inr (fmap (\g -> g e) a))
