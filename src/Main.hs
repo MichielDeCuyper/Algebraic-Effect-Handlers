@@ -4,6 +4,8 @@
 
 module Main where
 
+import Data.Char
+
 -- Datatypes
 -- Effects
 import           Effect.Writer
@@ -21,19 +23,20 @@ import           Typeclass.TermMonad
 main :: IO ()
 main = putStrLn "Hello"
 
-example :: TermMonad h (State Int + Void) => Int -> h Int
+example :: TermMonad h (Error String + State Int + Void) => Int -> h Int
 example n
-  | n <= 0 = get
+  | n < 0 = throw "Negative number"
+  | n == 0 = get
   | otherwise =
       do a <- get
          put (a + n)
          example (n - 1)
 
-a :: (String, Int)
-a = run . runWriter $ runLogState (example 1) 3
-
-b :: Int
-b = run $ runState (example 1) 4
+-- a :: (String, Int)
+-- a = run . runWriter $ runLogState (example 1) 3
+--
+-- b :: Int
+-- b = run $ runState (example 1) 4
 
 -- main :: IO ()
 -- main = print $ show f
@@ -70,6 +73,12 @@ greeter :: TermMonad m (Reader String + Void) => m String
 greeter = do name <- ask
              return ("Hello " ++ name)
 
+yell :: String -> String
+yell = (++ "!!") . fmap toUpper
 
-fault :: TermMonad m (Error String + Void) => m a
-fault = throw "Derp"
+fault :: (TermMonad m (Error String + Void)) => m Int
+fault = throw "Not implementet"
+
+handle :: (TermMonad m (Error String + State Int + Void)) => String -> m Int
+handle "Negative number" = return 0
+handle _ = throw "Error"
