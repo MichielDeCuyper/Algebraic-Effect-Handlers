@@ -21,24 +21,24 @@ instance Functor (State s) where
     fmap f (Put s k) = Put s (f k)
     fmap f (Get k) = Get (f . k)
 
-newtype StateCarrier s m a = SC {unSC :: s -> m a}
+newtype StateCarrier s m a = SC {unSC :: s -> m (a, s)}
 
 instance Functor m => Functor (StateCarrier s m) where
-    fmap f x = SC (fmap (fmap f) (unSC x))
+    fmap f x = SC (fmap (fmap (\(a, s) -> (f a, s))) (unSC x))
 
 instance TermMonad m f => TermAlgebra (StateCarrier s m) (State s + f) where
     con = SC . (algState \/ conState) . fmap unSC
     var = SC . genState
 
-runState :: TermMonad m f => Codensity (StateCarrier s m) a -> s -> m a
+runState :: TermMonad m f => Codensity (StateCarrier s m) a -> s -> m (a, s)
 runState = unSC . runCod var
 
-algState :: TermMonad m f => State s (s -> m a) -> s -> m a
+algState :: TermMonad m f => State s (s -> m (a, s)) -> s -> m (a, s)
 algState (Put s' k) _ = k s'
 algState (Get k) s = k s s
 
-genState :: TermMonad m f => a -> s -> m a
-genState x = const (var x) -- == \_ -> var x
+genState :: TermMonad m f => a -> s -> m (a, s)
+genState a s = return (a, s) -- == \_ -> var x
 
 conState :: (Functor g, TermAlgebra m g) => g (s -> m a) -> s -> m a
 conState op s = con (fmap (\m -> m s) op)

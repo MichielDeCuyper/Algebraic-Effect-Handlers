@@ -1,4 +1,5 @@
 {-# LANGUAGE TypeOperators, GADTSyntax, MultiParamTypeClasses, FlexibleInstances #-}
+{-# LANGUAGE IncoherentInstances       #-}
 {-|
 Module: Typeclass.Coproduct
 Description: Coproduct
@@ -7,10 +8,11 @@ License: MIT
 Maintainer: Michiel.DeCuyper@student.kuleuven.be
 Stability: Experimental
 -}
-module Typeclass.Coproduct (type (+) (Inl, Inr), (\/), (:<), inject ) where
+module Typeclass.Coproduct (type (+) (Inl, Inr), (\/), (:<), inject, inj, prj ) where
 
 import Typeclass.TermAlgebra
 import Typeclass.TermMonad
+
 -- | Coproduct
 --  The coproduct of two datatypes f and g is denoted as @f + g@
 data (+) f g a where
